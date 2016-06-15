@@ -1,0 +1,75 @@
+.contact_form{
+  background-image:url("../images/contact_photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  // display: flex;
+  // flex-direction: row;
+  h2 {
+  // color: #2d2d2d;
+  color: white;
+  font-size: 30px;
+  margin:20px;
+  text-align: center;
+  // display: flex;
+  // justify-content: center;
+  }
+}
+.container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  width: 50%;
+  background-color:#010930;
+  // border: 2px solid blue;
+  margin: 0 auto;
+  margin-top: 40px;
+  box-shadow: 20px 20px 20px #c3b8b0;
+  @include phone {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  }
+}
+
+.comments input[type=submit] {
+display:block;
+padding:10px;
+margin: 0 auto;
+font-size: 1.2em;
+background-color: #f06600;
+border: none;
+color: white;
+width: 300px;
+height: 45px;
+margin-bottom: 15px;
+margin-top: 30px;
+@include phone {
+width: 217px;
+}
+}
+
+.comments input[type=text], .comments textarea {
+  width: 70%;
+  font-size: 12px;
+  padding: 10px;
+  margin-bottom: 20px;
+  resize: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #6a6b6d;
+}
+.comments ::-webkit-input-placeholder {
+  color:#3e3f41;
+}
+.comments ::-moz-input-placeholder {
+  color:#3e3f41;
+}
+.comments ::-ms-input-placeholder {
+  color: #3e3f41;
+}
+form{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}

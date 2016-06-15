@@ -1,0 +1,37 @@
+// @mixin phone {
+//   @media (min-width:320px)and (max-width: 568px){
+//   font-size: 14px;
+//   }
+// }
+// @mixin menu {
+//   @media (min-width:320px)and (max-width: 568px){
+//   display: block;
+//   }
+// }
+
+$tablet-width: 768px;
+@mixin tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+$phone-width: 320px;
+@mixin phone {
+  @media (max-width: #{$phone-width}) {
+    @content;
+  }
+}
+
+@mixin flexbox {
+
+  display: -webkit-box;
+  display: -moxt-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// @mixin font($font-size) {
+//
+// font-size: 14px;
+// }

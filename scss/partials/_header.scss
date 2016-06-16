@@ -1,5 +1,5 @@
 header {
-    width: 100%;                       //kontener na 100vh
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -10,166 +10,198 @@ header {
     border: 2px solid white;
     border: 2px solid white;
 
-    div {
-      margin-top: -150px;
-      // border: 2px solid yellow;
-    }
-
-    .social_media_icons {                     //SOCIAL MEDIA ICONS
-
-    width: 100%;
-    height:auto;
-    // border: 2px solid red;
-    text-align: right;
-    padding: 1em;
-    li {
-      display: inline-block;
-      margin-right: 20px;
-
-    }
-  }                                         //
-
-    h3 {
-                                  //HEAD
-      text-align: center;
-      width: 100%;
-      height: auto;
-      color: white;
-      font-size: 60px;
-      // border: 2px solid white;
-      @include phone {
-        margin:0;
-        font-size: 30px;
-      }
-    }                                       //
-
-    .logo {                                 //LOGOTYPE
-      text-align: center;
-      width: 100%;
-      padding: 0;
-      height: auto;
-      margin: 0 auto;
-      margin-top: 70px;
-      // border: 2px solid green;
-
-    }
-    @include phone {
-    width: 100%;
-    }
-  }
-
-
-                                          // MENU GLOWNE
-// nav.blend{
-//   mix-blend-mode:multiply;
-//   opacity: 0.5;
-// }
-.main_menu {
-
-  margin-top: 60px;
-  width: 100%;
-  height: auto;
-  background-color: rgba(0, 5, 28, 0.6);
-  // mix-blend-mode:multiply;
-  // border: 2px solid white;
-  ul {
-
-    width: 60%;
-    margin: 0 auto;
-    padding: 0;
-    @include flexbox();
-    justify-content:space-around;
-    list-style-type: none;
-    // border: 2px solid white;
-
-      li {
-        font-size: 18px;
-        color: white;
-        padding: 20px;
+      div {
+        margin-top: -150px;
         @include phone {
-          margin:0;
-          font-size: 12px;
+        margin-top:-105px;
         }
-       a {
+      }
+
+      .social_media_icons {                     //SOCIAL MEDIA ICONS
+        width: 100%;
+        height:auto;
+        text-align: right;
+        padding: 1em;
+            li {
+                display: inline-block;
+                margin-right: 20px;
+              }
+        @include phone {
+          text-align: center;
+        }
+      }
+
+
+      h3 {                                       //HEAD
+        // font-family: 'Slabo';
+        text-align: center;
+        width: 100%;
+        height: auto;
         color: white;
-        text-decoration: none;
-        // border: 2px solid orange;
-        &:hover {
-          border-bottom: 3px solid #f06600;
+        font-size: 60px;
+        font-weight: normal;
+        @include phone {
+          font-weight: normal;
+          margin:0;
+          font-size: 30px;
+          margin-top: 40px;
+        }
+      }
+
+      .logo {                                   //LOGOTYPE
+          text-align: center;
+          width: 100%;
+          padding: 0;
+          height: auto;
+          margin: 0 auto;
+          margin-top: 70px;
+          @include phone {
+            margin-top: 30px;
+          }
+        }
+      }
+
+
+
+
+.main_menu {                                   // MAIN MENU
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 5, 28, 0.6);
+
+    ul {
+      width: 60%;
+      margin: 0 auto;
+      padding: 0;
+      @include flexbox();
+      justify-content:space-around;
+      list-style-type: none;
+      @include phone {
+        width:100%;
+        flex-direction: row;
+        flex-wrap:wrap;
+      }
+        li {
+            // font-weight:300;
+            font-size: 18px;
+            color: white;
+            padding: 20px;
+            @include phone {
+              font-weight:300;
+              margin:0;
+              font-size: 14px;
+            }
+            a {
+            color: white;
+            text-decoration: none;
+            // border: 2px solid orange;
+            &:hover {
+              border-bottom: 3px solid #f06600;
+            }
+          }
         }
       }
     }
-  }
-}
 
 
-#wild_nature {
-  position: relative;
-                                            //PODMENU WILD_NATURE
-  .after {
-    width: 100%;
-    visibility: hidden;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    height:0;
-    top: 62px;
-    left: 1px;
-    // top: 60px;
-    color: red;
+#wild_nature {                                  //SUBMENU WILD_NATURE
+    position: relative;
     text-align: center;
-    li {
-      height: auto;
-      width: 100%;
-      color: white;
-      // border: 2px solid green;
-      padding: 10px;;
-      &:hover {
-        border: 2px solid #f06600;
+
+        .after {
+        width: 40vh;
+        visibility: hidden;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height:0;
+        top: 64px;
+        left: -75px;
+        color: red;
+        text-align: center;
+        flex-direction: row;
+        flex-wrap:wrap;
+        padding: 5px;
+        @include phone {
+          // display: none;
+          position: relative;
+          top:10px;
+          left:0;
+        }
+      }
+        li {
+            font-size: 14px;
+            font-weight:300;
+            height: auto;
+            width: 100%;
+            color: white;
+            // padding: 10px;;
+                &:hover {
+                  border: 2px solid #f06600;
+                }
+            @include phone {
+              // font-weight:300;
+              padding: 10px;
+            }
+          }
+
+    &:hover .after {
+      visibility: visible;
+      background-color: rgba(0, 5, 28, 0.6);
+      height:200px;
+      @include phone {
+        width: 55vh;
+        align-items:center;
       }
     }
   }
 
-  &:hover .after{
-    visibility: visible;
-    background-color: rgba(0, 5, 28, 0.6);
-    height:200px;
-  }
-}
 
 
-
-#urban_places {                                      //PODMENU URBAN_PLACES
-  position: relative;
-
-  .after {
-    width: 100%;
-    visibility: hidden;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    height:0;
-    top: 62px;
-    left: 1px;
-    // top: 60px;
-    color: red;
+#urban_places {                                      //SUBMENU URBAN_PLACES
+    position: relative;
     text-align: center;
-    li {
-      height: auto;
-      width: 100%;
-      color: white;
-      // border: 2px solid green;
-      padding: 10px;;
-      &:hover {
-          border: 2px solid #f06600;
+
+        .after {
+        width: 40vh;
+        visibility: hidden;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height:0;
+        top: 64px;
+        left: -75px;
+        // top: 60px;
+        color: red;
+        text-align: center;
+            li {
+              font-size: 14px;
+              font-weight:300;
+              height: auto;
+              width: 100%;
+              color: white;
+              &:hover {
+                  border: 2px solid #f06600;
+            }
+          }
+        @include phone {
+          // display: none;
+          position: relative;
+          top:10px;
+          left:0;
+        }
+      }
+    &:hover .after{
+      visibility: visible;
+      background-color:rgba(0, 5, 28, 0.6);
+      height:200px;
+      @include phone {
+        // display: none;
+        width: 55vh;
+        align-items:center;
+      }
     }
   }
-}
-  &:hover .after{
-    visibility: visible;
-    background-color:rgba(0, 5, 28, 0.6);
-    height:200px;
-  }
-}

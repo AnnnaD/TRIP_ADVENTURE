@@ -1,73 +1,45 @@
-//SECTION URBAN PLACES
+// .btn_more_urban {
+//   background-color: rgba(255, 255, 255, 0.4);                            //btn for mobile
+//   width: 100%;
+//   font-size: 12px;
+//   border: 2px solid #ffffff;
+//   padding: 10px;
+//   position:relative;
+//   top:-10px;
+//   color:white;
+// }                                        //SECTION URBAN PLACES
 
 .urban_places {
-  margin:0;
-  padding: 30px;
-  font-size:30px;
-  text-align: center;
-  color:white;
-  background-color: #f06600;
-  margin-top: 30px;
-}
+    margin:0;
+    padding: 30px;
+    font-size:30px;
+    text-align: center;
+    color:white;
+    background-color: #f06600;
+    margin-top: 30px;
+    @include phone {
+    font-size: 24px;
+    padding: 15px;
+    margin:0;
+    }
+  }
 
 .lines_straight{
-z-index: -1;
-width: 35%;
-margin-top: 250px;
-position: absolute;
-left:350px;
-right: 80px;
-border-top: 3px dashed orange;
-@include phone {
-display: none;
-}
-}
+    z-index: -1;
+    width: 35%;
+    margin-top: 250px;
+    position: absolute;
+    left:350px;
+    right: 80px;
+    border-top: 3px dashed orange;
+    @include phone {
+      display: none;
+    }
+  }
 
 .photos_and_descriptions_warsav {           //WARSAV
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  @include phone {
-    width: 100%;
-    height: auto;
-    display: inline;
-  }
-  // border: 2px solid green;
-}
-
-#warsav_description{
-  background-color: #010930;
-  margin-top: 60px;
-  margin-right: 100px;
-  border:3px solid #f06600;
-  h4 {
-    text-align: center;
-    margin:30px 30px 15px 30px;
-    font-size: 24px;
-    color: white;
-    font-weight: bold;
-  }
-  p {
-    color: white;
-    text-align: justify;
-    font-size: 14px;
-    margin: 15px 30px 30px 30px;
-  }
-  @include phone {
-    margin-top:0;
-    margin-right:0;
-    width: auto;
-  }
-}
-
-  //CRACOV
-
-  .photos_and_descriptions_cracov {
     display: flex;
     justify-content: space-between;
-    // flex-direction: column-reverse;
     align-items: center;
     width: 100%;
     height: auto;
@@ -76,31 +48,138 @@ display: none;
       height: auto;
       display: inline;
     }
-    // border: 2px solid green;
-    // background-color: #d7dddf;
   }
+    #warsav_description {
+      background-color: #010930;
+      margin-top: 60px;
+      margin-right: 100px;
+      // padding-bottom: 20px;
+      border:3px solid #f06600;
+        h4 {
+          text-align: center;
+          margin:30px 30px 15px 30px;
+          font-size: 24px;
+          color: white;
+          font-weight: bold;
+          @include phone {
+            font-size: 18px;
+            margin: 0;
+            padding:20px;
+            background-color:rgba(1, 9, 48, 0.7);
+          }
+        }
+        p {
+          color: white;
+          text-align: justify;
+          font-size: 14px;
+          margin: 15px 30px 50px 30px;
+          @include phone {
+            font-weight:300;
+            margin:0;
+            padding: 12px;
+            background-color:rgba(1, 9, 48, 0.7);
+          }
+          .hidden{
+            @include phone {
+            visibility: hidden;
+            }
+          }
+        }
+      @include phone {
+        margin-top:0;
+        margin-right:0;
+        width: auto;
+        background-image:url("../images/mountains.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .btn_more_urban {
+        height: 45px;
+        background-color: rgba(255, 255, 255, 0.4);                            //btn for mobile
+        width: 100%;
+        font-size: 14px;
+        border: 2px solid #ffffff;
+        padding: 10px;
+        position:relative;
+        top:20px;
+        color:white;
+        @include phone {
+        top:-10px;
+        }
+      }
+    }
 
-  #cracov_description {
-    background-color:#010930;
-    margin-top: 60px;
-    margin-right: 100px;
-    border:3px solid #f06600;
-    h4 {
-      text-align: center;
-      margin:30px 30px 15px 30px;
-      font-size: 24px;
-      color: white;
-      font-weight: bold;
+    //CRACOV
+
+    .photos_and_descriptions_cracov {
+      display: flex;
+      justify-content: space-between;
+      // flex-direction: column-reverse;
+      align-items: center;
+      width: 100%;
+      height: auto;
+        @include phone {
+          width: 100%;
+          height: auto;
+          display: inline;
+        }
     }
-    p {
-      text-align: justify;
-      color: white;
-      font-size: 14px;
-      margin: 15px 30px 30px 30px;
-    }
+
+    #cracov_description {
+      background-color:#010930;
+      margin-top: 60px;
+      margin-right: 100px;
+      border:3px solid #f06600;
+        h4 {
+          text-align: center;
+          margin:30px 30px 15px 30px;
+          font-size: 24px;
+          color: white;
+          font-weight: bold;
+          @include phone {
+            font-size: 18px;
+            margin: 0;
+            padding:20px;
+            background-color:rgba(1, 9, 48, 0.7);
+          }
+        }
+        p {
+          text-align: justify;
+          color: white;
+          font-size: 14px;
+          margin: 15px 30px 50px 30px;
+          @include phone {
+            font-weight:300;
+            margin:0;
+            padding: 12px;
+            background-color:rgba(1, 9, 48, 0.7);
+          }
+          .hidden{
+            @include phone {
+            visibility: hidden;
+            }
+          }
+        }
     @include phone {
       margin-top:0;
       margin-right:0;
       width: auto;
-    }
-}
+      background-image:url("../images/mountains.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      }
+      .btn_more_urban {
+        height: 45px;
+        background-color: rgba(255, 255, 255, 0.4);                            //btn for mobile
+        width: 100%;
+        font-size: 14px;
+        border: 2px solid #ffffff;
+        padding: 10px;
+        position:relative;
+        top:20px;
+        color:white;
+        @include phone {
+        top:-10px;
+        }
+      }
+  }

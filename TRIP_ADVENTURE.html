@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <title>Trip Adventure</title>
     <link rel="stylesheet" href="css/style.css">
+
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic,300italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<!-- <link href='https://fonts.googleapis.com/css?family=Slabo+27px&subset=latin,latin-ext' rel='stylesheet' type='text/css'> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <header class="ta_head">
-    <div class="logo"><img src="./images/logo.png" alt="sdt"></div>
+    <!-- <div class="logo"><img src="./images/logo.png" alt="sdt"></div> -->
+    <div class="logo"><img src="./images/logo_phone.png" alt="sdt"></div>
     <!-- <div class="main_width"> -->
     <div>
       <h3>TRIP ADVENTURE</h3>
       <nav class="main_menu blend">
         <ul class="main_nav">
-            <li><a href="#">ABOUT</a></li>
             <li id="wild_nature"><span>WILD NATURE  </span>
 
               <ul class="after">
@@ -31,10 +35,11 @@
                 <li>Gdansk</li>
               </ul>
             </li>
+            <li><a href="#">CONTACT</a></li>
         </ul>
       </nav>
   </div>
-
+  <!-- <div class="rectangle"></div> -->
 
  <footer>
     <ul class="social_media_icons">
@@ -43,9 +48,7 @@
       <li><img src="./images/twitter_icon.png" alt="sdt"></li>
       <li><img src="./images/pinterest_icon.png" alt="sdt"></li>
     </ul>
-
 </footer>
-
   </header>
 
   <section class="ta_section">
@@ -59,7 +62,6 @@
       <li><img src="./images/masuria.jpg" alt="Masuria_photo" class="shadow_blue">
         <div class="hover effect"></div>
       </li>
-
       <li id="masuria_description">
         <ul class="hobby_icons">
           <li><img src="./images/fb_icon.png" alt="sdt"></li>
@@ -67,7 +69,9 @@
           <li><img src="./images/twitter_icon.png" alt="sdt"></li>
         </ul>
         <h4>Masuria</h4>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui odio blanditiis praesentium odio voluptatum deleniti atque corrupti quos dolores et quas molestias ies excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</li>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui odio blanditiis praesentium odio voluptatum deleniti atque corrupti quos.<span class="hidden"> Dolores et quas molestias ies excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia.</span>
+            <button class="btn_more">VIEW MORE</button>
+        </li>
     </ul>
 
     <ul class="photos_and_descriptions_mountains">
@@ -79,7 +83,9 @@
           <li><img src="./images/twitter_icon.png" alt="sdt"></li>
         </ul>
         <h4>Mountains</h4>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</li>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.<span class="hidden"> Et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt.</span>
+          <button class="btn_more">VIEW MORE</button>
+        </li>
       <li><img src="./images/masuria.jpg" alt="sdt" class="shadow_blue"></li>
     </ul>
   </section>
@@ -93,7 +99,8 @@
       <li><img src="./images/mountains.jpg" alt="sdt" class="shadow_orange"></li>
       <li id="warsav_description">
         <h4>Warsav</h4>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui odio blanditiis praesentium odio voluptatum deleniti atque corrupti quos dolores et quas molestias ies excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui odio blanditiis praesentium odio voluptatum deleniti atque corrupti quos.<span class="hidden">Dolores et quas molestias ies excepturi sint occaecati cupiditate non provident, similique sunt.</span>
+          <button class="btn_more_urban">VIEW MORE</button>
         </li>
     </ul>
 
@@ -101,14 +108,15 @@
       <div class="lines_straight"></div>
       <li id="cracov_description">
         <h4>Cracov</h4>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.<span class="hidden">Et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia.</span>
+            <button class="btn_more_urban">VIEW MORE</button>
         </li>
       <li><img src="./images/mountains.jpg" alt="sdt" class="shadow_orange"></li>
     </ul>
   </section>
 
   <section class="contact_form">
-    <nav class="urban_places">
+    <nav class="contact">
       CONTACT
     </nav>
     <div class="container">
@@ -117,7 +125,7 @@
                 <input type="text" name="name" placeholder="First Name">
                 <input type="text" name="name" placeholder="Last Name">
                 <textarea cols="40" rows="4" name="comment" placeholder="Message"></textarea>
-                <input type="submit" value="Wyslij">
+                <input type="submit" value="SEND">
               </form>
             </article>
           </main>

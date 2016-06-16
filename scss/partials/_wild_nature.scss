@@ -1,3 +1,14 @@
+.btn_more {
+  height:45px;                //btn for mobile
+  width: 100%;
+  font-size: 14px;
+  border: 2px solid #010930;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  position:relative;
+  top:20px;
+}
+
 section {
   width: 100%;                       //kontener na 100vh
   height: auto;
@@ -12,6 +23,10 @@ section {
     text-align: center;
     color:white;
     background-color: #010930;
+    @include phone {
+    font-size: 24px;
+    padding: 15px;
+    }
   }
 
                                         //MASURIA
@@ -77,12 +92,41 @@ section {
       margin:30px 30px 15px 30px;
       font-size: 24px;
       font-weight: bold;
+      @include phone {
+        font-size: 18px;
+        margin: 0;
+        padding:20px;
+        background-color:rgba(255, 255, 255, 0.7);
+      }
     }
     p {
       color: #3e3f41;
       text-align: justify;
       font-size: 14px;
-      margin: 15px 30px 30px 30px;
+      margin: 15px 30px 50px 30px;
+      @include phone {
+        margin:0;
+        padding: 12px;
+        background-color:rgba(255, 255, 255, 0.7);
+      }
+      .hidden{
+        @include phone {
+        visibility: hidden;
+        }
+      }
+      .btn_more {
+        height:45px;                //btn for mobile
+        width: 100%;
+        font-size: 14px;
+        border: 2px solid #010930;
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 10px;
+        position:relative;
+        top:20px;
+        @include phone {
+        top:-10px;
+        }
+      }
     }
     .hobby_icons {
       // margin-left: 20px;
@@ -90,7 +134,10 @@ section {
       text-align:right;
       background-color: #BCB9B7;
       // border: 2px solid green;
-      li{
+      @include phone {
+        padding:5px;
+      }
+      li {
         // float: right;
         display: inline;
         margin: 0;
@@ -101,6 +148,13 @@ section {
       margin-top:0;
       margin-right:0;
       width: auto;
+    }
+    @include phone {
+      background-image:url("../images/masuria.jpg");
+      background-color: rgba(255, 255, 255, 0.7);
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin:0;
     }
   }
 }
@@ -130,17 +184,57 @@ section {
     margin:30px 30px 15px 30px;
     font-size: 24px;
     font-weight: bold;
+    @include phone {
+      padding:20px;
+      font-size: 18px;
+      margin: 0;
+      background-color:rgba(255, 255, 255, 0.7);
+    }
   }
   p {
     text-align: justify;
     font-size: 14px;
-    margin: 15px 30px 30px 30px;
+    margin: 15px 30px 50px 30px;
+    @include phone {
+      margin:0;
+      padding: 12px;
+      background-color:rgba(255, 255, 255, 0.7);
+    }
+    .hidden{
+      @include phone {
+      visibility: hidden;
+      }
+    }
+    .btn_more {
+      height:45px;                //btn for mobile
+      width: 100%;
+      font-size: 14px;
+      border: 2px solid #010930;
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 10px;
+      position:relative;
+      top:20px;
+      @include phone {
+      top:-10px;
+      }
+    }
+  }
+  .btn_more {                 //btn for mobile
+    width: 100%;
+    font-size: 12px;
+    border: 2px solid #010930;
+    padding: 10px;
+    position:relative;
+    top:-10px;
   }
   .hobby_icons {
     // margin-left: 20px;
     width: 100%;
     text-align:right;
     background-color: #BCB9B7;
+    @include phone {
+      padding:5px;
+    }
     li {
       display: inline;
       margin: 0;
@@ -148,6 +242,10 @@ section {
     }
 }
 @include phone {
+  background-color: rgba(255, 255, 255, 0.7);
+  background-image:url("../images/masuria.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-top:0;
   margin-right:0;
   width: auto;

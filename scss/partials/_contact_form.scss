@@ -1,3 +1,19 @@
+
+.contact {
+  margin:0;
+  padding: 30px;
+  font-size:30px;
+  text-align: center;
+  color:white;
+  background-color: #f06600;
+  margin-top: 30px;
+  @include phone {
+  font-size: 24px;
+  padding: 15px;
+  margin-top:0;
+  }
+}
+
 .contact_form{
   background-image:url("../images/contact_photo.jpg");
   background-size: cover;
@@ -5,15 +21,15 @@
   height: 800px;
   // display: flex;
   // flex-direction: row;
-  h2 {
-  // color: #2d2d2d;
-  color: white;
-  font-size: 30px;
-  margin:20px;
-  text-align: center;
-  // display: flex;
-  // justify-content: center;
-  }
+    h2 {
+    // color: #2d2d2d;
+    color: white;
+    font-size: 16px;
+    margin:20px;
+    text-align: center;
+    // display: flex;
+    // justify-content: center;
+    }
 }
 .container {
   padding-top: 30px;
@@ -50,7 +66,7 @@ width: 217px;
 }
 
 .comments input[type=text], .comments textarea {
-  width: 70%;
+  width: 90%;
   font-size: 12px;
   padding: 10px;
   margin-bottom: 20px;

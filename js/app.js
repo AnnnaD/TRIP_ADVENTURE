@@ -1,67 +1,84 @@
 $(document).ready(function() {
   // console.log("test")
 
-  // var wild_nature = $('#wild_nature');
-  // animateMenu(wild_nature);
-  // var urban_places = $('#urban_places');
-  // animateMenu(urban_places);
+  var wild_nature = $('#wild_nature');
+  animateMenu(wild_nature);
+  var urban_places = $('#urban_places');
+  animateMenu(urban_places);
+  var btn_more=$('section').find('.btn_more')
 
-  lightingButtons();
+  // darkingButtons();
+  // lightingButtons();
+  step();
 
 });
 
 
 //MENU
 
-// function animateMenu(element) {
-//   var after = $('.after');
-//   element.on('mouseenter', function() {
-//     // after.slideDown('slow');
-//     $(this).find('.after').animate({
-//       visibility: 'visible'
-//     },1000)
-//   });
-//
-//   element.on('mouseleave', function() {
-//     // after.slideUp('slow');
-//     $(this).find('.after').css(
-//       'visibility', 'hidden')
-//   });
-// }
 
-//
+function animateMenu(element) {
+  var after = $('.after');
+  element.on('mouseenter', function() {
+     if($(window).width() > 400) {
+       $(this).find('.after').slideDown('slow');
+     } else {
+       $(this).find('.after').show();
+     }
+
+  });
+
+  element.on('mouseleave', function() {
+    if($(window).width() > 400) {
+      $(this).find('.after').slideUp('slow');
+    } else {
+      $(this).find('.after').hide();
+    }
+  });
+}
 
 
-// function urban() {
+function step() {
+
+var foot = $('.foot');
+ $( window ).scroll(function() {
+    var heightHeader = $('.ta_head').height();
+    if( $(window).scrollTop() >= heightHeader ) {
+         $('.foot').each( function(i){
+            if ($(window).scrollTop() >= $(this).offset().top - 300 ) {
+                $(this).animate({'opacity':'1'},1000);
+            }
+         })
+    }
+});
+}
+
+
+// function darkingButtons() {
 //
-//   var urban_places = $('#urban_places');
-//   var after = $('.after');
+//   var btn_more=$('section').find('.btn_more')
+//   var button = $('button');
 //
-//   urban_places.on('mouseover', function() {
-//         after.slideDown('slow');
+//   btn_more.on('mouseenter', function() {
+//     $(this).addClass('shadow_btn_dark')
 //     });
 //
-//     urban_places.on('mouseleave', function() {
-//           after.slideUp('slow');
-//       });
+//    btn_more.on('mouseleave', function() {
+//   //     // console.log($(this));
+//     $(this).removeClass('shadow_btn_dark')
+//   });
 // }
-
-
-//LIGHTING BUTTONS
-
-function lightingButtons() {
-
-  var btn_more = $('.btn_more');
-  var button = $('button');
-
-  button.on('mouseover', function() {
-    console.log("click");
-
-      btn_more.addClass('shadow_btn');
-    });
-    button.on('mouseleave', function() {
-      console.log("click");
-
-    btn_more.removeClass('shadow_btn');
-    });
-}
+//
+// function lightingButtons() {
+//
+//   var btn_more_urban = $('.btn_more_urban');
+//   var button = $('button');
+//
+//   btn_more_urban.on('mouseover', function() {
+//     $(this).addClass('shadow_btn')
+//   });
+//
+//   btn_more_urban.on('mouseleave', function() {
+//     $(this).removeClass('shadow_btn')
+//     });
+// }

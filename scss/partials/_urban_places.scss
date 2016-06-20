@@ -7,7 +7,10 @@
 //   position:relative;
 //   top:-10px;
 //   color:white;
-// }                                        //SECTION URBAN PLACES
+// }
+                                    //SECTION URBAN PLACES
+
+
 
 .urban_places {
     margin:0;
@@ -24,7 +27,7 @@
     }
   }
 
-.lines_straight{
+.lines_straight {
     z-index: -1;
     width: 35%;
     margin-top: 250px;
@@ -106,6 +109,10 @@
         @include phone {
         top:-10px;
         }
+        &:hover{
+          background-color: #ffffff;
+          color: black;
+        }
       }
     }
 
@@ -181,5 +188,12 @@
         @include phone {
         top:-10px;
         }
+        &:hover{
+          background-color: #ffffff;
+          color: black;
+        }
       }
+      // .shadow_btn{
+      //   box-shadow: 2px 2px 15px #ffffff;
+      // }
   }

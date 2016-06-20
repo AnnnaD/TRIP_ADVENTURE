@@ -41,21 +41,27 @@ header {
         font-size: 60px;
         font-weight: normal;
         @include phone {
+          position: absolute;
+          top:50px;
           font-weight: normal;
           margin:0;
           font-size: 30px;
-          margin-top: 40px;
+          margin-top: 50px;
         }
       }
 
-      .logo {                                   //LOGOTYPE
+      .logo {
+                                            //LOGOTYPE
           text-align: center;
-          width: 100%;
+          width: 70px;
+          height: 70px;
           padding: 0;
           height: auto;
           margin: 0 auto;
           margin-top: 70px;
           @include phone {
+            width: 50px;
+            height: 50px;
             margin-top: 30px;
           }
         }
@@ -79,15 +85,19 @@ header {
       list-style-type: none;
       @include phone {
         width:100%;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap:wrap;
       }
         li {
             // font-weight:300;
+            text-align:center;
             font-size: 18px;
             color: white;
             padding: 20px;
             @include phone {
+              padding:0;
+              padding-top:10px;
+              padding-bottom:10px;
               font-weight:300;
               margin:0;
               font-size: 14px;
@@ -95,12 +105,14 @@ header {
             a {
             color: white;
             text-decoration: none;
-            // border: 2px solid orange;
             &:hover {
               border-bottom: 3px solid #f06600;
             }
           }
         }
+      }
+      @include phone {
+      margin-top: 110px;
       }
     }
 
@@ -111,21 +123,16 @@ header {
 
         .after {
         width: 40vh;
-        visibility: hidden;
         height: auto;
-        display: flex;
-        flex-direction: column;
         position: absolute;
-        height:0;
         top: 64px;
         left: -50px;
         color: red;
         text-align: center;
-        flex-direction: row;
-        flex-wrap:wrap;
+        background-color: rgba(0, 5, 28, 0.6);
+        display: none;
         padding: 5px;
         @include phone {
-          // display: none;
           position: relative;
           top:10px;
           left:0;
@@ -137,22 +144,17 @@ header {
             height: auto;
             width: 100%;
             color: white;
-            // padding: 10px;;
                 &:hover {
                   border: 2px solid #f06600;
                 }
             @include phone {
-              // font-weight:300;
               padding: 10px;
             }
           }
 
     &:hover .after {
-      visibility: visible;
-      background-color: rgba(0, 5, 28, 0.6);
-      height:200px;
       @include phone {
-        width: 55vh;
+        width: 100%;
         align-items:center;
       }
     }
@@ -163,45 +165,48 @@ header {
 #urban_places {                                      //SUBMENU URBAN_PLACES
     position: relative;
     text-align: center;
+    // left:0;
+    // top:0;
+    // display: block;
 
-        .after {
-        width: 40vh;
-        visibility: hidden;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        height:0;
-        top: 64px;
-        left: -50px;
-        // top: 60px;
-        color: red;
-        text-align: center;
-            li {
-              font-size: 14px;
-              font-weight:300;
-              height: auto;
-              width: 100%;
-              color: white;
-              &:hover {
-                  border: 2px solid #f06600;
-            }
-          }
-        @include phone {
-          // display: none;
-          position: relative;
-          top:10px;
-          left:0;
-        }
-      }
-    &:hover .after{
-      visibility: visible;
-      background-color:rgba(0, 5, 28, 0.6);
-      height:200px;
-      @include phone {
-        // display: none;
-        width: 55vh;
-        align-items:center;
-      }
-    }
-  }
+
+    @include menu();
+
+}
+  //       .after {
+  //       width: 40vh;
+  //       height: auto;
+  //       position: absolute;
+  //       top: 64px;
+  //       left: -50px;
+  //       color: red;
+  //       text-align: center;
+  //       background-color: rgba(0, 5, 28, 0.6);
+  //       display: none;
+  //       padding: 5px;
+  //       @include phone {
+  //         position: relative;
+  //         top:10px;
+  //         left:0;
+  //       }
+  //     }
+  //           li {
+  //             font-size: 14px;
+  //             font-weight:300;
+  //             height: auto;
+  //             width: 100%;
+  //             color: white;
+  //             &:hover {
+  //                 border: 2px solid #f06600;
+  //               }
+  //       @include phone {
+  //         padding:10px;
+  //       }
+  //     }
+  //   &:hover .after{
+  //     @include phone {
+  //       width: 55vh;
+  //       align-items:center;
+  //     }
+  //   }
+  // }

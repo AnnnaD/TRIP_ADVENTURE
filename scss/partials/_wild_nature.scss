@@ -1,70 +1,59 @@
-
+//SCROLLING EFFECT SECTION
 
 section {
-  width: 100%;                       //kontener na 100vh
+  width: 100%;
   height: auto;
   position: relative;
 
-  // border: 2px solid red;
 .foot {
   display: block;
   width: 30px;
   height: 30px;
-  // border: 2px solid green;
   position: absolute;
-  // background-image: url("../images/foot_left.svg");
-  // background-size: contain;
-  // background-repeat: no-repeat;
   opacity:0;
 }
 .one {
+  top: 130px;
+  right: 440px;
   background-image: url("../images/foot_left.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  top: 130px;
-  right: 440px;
-  // right: 250px;
-  // transform: rotate(30deg);
 }
 
 .two {
+  top: 180px;
+  right: 480px;
   background-image: url("../images/foot_right.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  top: 180px;
-  right: 480px;
-  // transform: rotate(20deg);
 }
 
 .three {
+  top: 240px;
+  right: 450px;
   background-image: url("../images/map_point.svg");     //MAP POINT MASURIA
   background-size: contain;
   background-repeat: no-repeat;
-  top: 240px;
-  right: 450px;
-  // transform: rotate(40deg);
 }
 
 .four {
+  top: 620px;
+  right: 440px;
   background-image: url("../images/foot_left.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  top: 620px;
-  right: 440px;
-  // transform: rotate(90deg);
 }
 
 .five {
+  top: 680px;
+  right: 480px;
   background-image: url("../images/foot_right.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  top: 680px;
-  right: 480px;
-  // transform: rotate(90deg);
 }
 
 .six {
-  top: 700px;
+  top: 730px;
   right: 650px;
   background-image: url("../images/sign_post.svg");
   background-size: contain;
@@ -81,312 +70,112 @@ section {
 
 
 .eight {
+  top: 1000px;
+  right: 700px;
   background-image: url("../images/foot_left.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  top: 1000px;
-  right: 700px;
   transform: rotate(-90deg);
 }
 
 .nine {
+  top: 1050px;
+  right: 650px;
   background-image: url("../images/foot_right.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  top: 1050px;
-  right: 650px;
   transform: rotate(-90deg);
 }
 
 .ten {
+  top: 1050px;
+  right: 600px;
   background-image: url("../images/sign_post.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  top: 1050px;
-  right: 600px;
 }
 
+//END OF SCROLLING EFFECT SECTION
 
 
+                            //WILD NATURE SECTION
+
+
+  .lines {
+      z-index: -1;
+      width: 35%;
+      height: 24%;
+      margin-top: 50px;
+      position: absolute;
+      left:350px;
+      right: 80px;
+      border-top: 3px dashed orange;
+      border-right: 3px dashed orange;
+      border-left: 3px dashed orange;
+    @include phone {
+    display: none;
+    }
+  }
 
   .wild_nature {
-    margin:0;
-    padding: 30px;
-    font-size:30px;
-    text-align: center;
-    color:white;
-    background-color: #010930;
+      margin:0;
+      padding: 30px;
+      font-size:30px;
+      text-align: center;
+      color:white;
+      background-color: #010930;
     @include phone {
     font-size: 24px;
     padding: 15px;
     }
   }
 
-                                        //MASURIA
   .photos_and_descriptions_masuria {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    @include phone {
-      width: 100%;
-      height: auto;
-      display: inline;
-    }
-  }
-
-    .lines{
-    z-index: -1;
-    width: 35%;
-    height: 24%;
-    margin-top: 50px;
-    position: absolute;
-    left:350px;
-    right: 80px;
-    border-top: 3px dashed orange;
-    border-right: 3px dashed orange;
-    border-left: 3px dashed orange;
-    @include phone {
-      display: none;
-    }
-  }
-  // .circle {
-  //   position: absolute;
-  //   left:150px;
-  //   right: 50px;
-  //   top: 80px;
-  //   z-index:1;
-  //   width: 150px;
-  //   height: 150px;
-  //   border-radius: 100%;
-  //   border: 4px solid white;
-  //   transform-origin: 0 0;
-  //   transition: 2s;
-    // @include phone {
-    // display: none;
-    // }
-    // &:hover{
-    //   display:block;
-    //   transform-origin: 50% 50%;
-    //   transform: rotate(90deg);
-    // }
-  // }
-
-
-  li {
-    position: relative;
-    margin-top:120px;
-    margin-left: 100px;
-    margin-right: 100px;
-    width: 35%;
     .shadow_blue {
       box-shadow: 20px 20px 0px #010930;
       @include phone {
         display: none;
       }
     }
-    .shadow_orange {
-      box-shadow: 20px 20px 0px #f06600;
-      @include phone {
-        display: none;
-      }
-    }
-    @include phone {
-      margin:0;
-    }
-    // &:hover{
-    //   transform: scale(1.1);
-    // }
-    img {
-      &:hover{
-        transform: scale(1.1);
-      }
-    }
-  }
+    @include photos_and_descriptions();
+}
+
 
   #masuria_description {
-    background-color:#FFFAF7;
-    margin-top: 60px;
-    margin-right: 100px;
-    // border:3px solid #f06600;
-    h4 {
-      color: #3e3f41;
-      text-align: center;
-      margin:30px 30px 15px 30px;
-      font-size: 24px;
-      font-weight: bold;
-      @include phone {
-        font-size: 18px;
-        margin: 0;
-        padding:20px;
-        background-color:rgba(255, 255, 255, 0.7);
-      }
+@include description();
+.btn_more{
+    border: 2px solid #010930;
+    &:hover{
+      background-color: #010930;
+      color: white;
     }
-    p {
-      color: #3e3f41;
-      text-align: justify;
-      font-size: 14px;
-      margin: 15px 30px 50px 30px;
-      @include phone {
-        margin:0;
-        padding: 12px;
-        background-color:rgba(255, 255, 255, 0.7);
-      }
-      .hidden{
-        @include phone {
-        visibility: hidden;
-        }
-      }
-      .btn_more {
-        height:45px;                //btn for mobile
-        width: 100%;
-        font-size: 14px;
-        border: 2px solid #010930;
-        background-color: rgba(255, 255, 255, 0.4);
-        padding: 10px;
-        position:relative;
-        top:20px;
-        @include phone {
-        top:-10px;
-        }
-        &:hover{
-          background-color: #010930;
-          color: white;
-        }
-      }
-
-      // .shadow_btn_dark {
-      //   box-shadow: 1px 1px 5px #010930;
-      // }
-    }
-    .hobby_icons {
-      // margin-left: 20px;
-      // float: right;
-      text-align:right;
-      background-color: #BCB9B7;
-      // border: 2px solid green;
-      @include phone {
-        padding:5px;
-      }
-      li {
-        display: inline;
-        margin: 0;
-        padding: 5px;
-      }
-    }
-    @include phone {
-      margin-top:0;
-      margin-right:0;
-      width: auto;
-    }
-    @include phone {
-      background-image:url("../images/masuria.jpg");
-      background-color: rgba(255, 255, 255, 0.7);
-      background-size: cover;
-      background-repeat: no-repeat;
-      margin:0;
-    }
+}
   }
 }
+
 
 //MOUNTAINS
 
 .photos_and_descriptions_mountains {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  // border: 2px solid green;
-  @include phone {
-    width: 100%;
-    height: auto;
-    display: inline;
+  .shadow_blue {
+    box-shadow: 20px 20px 0px #010930;
+    @include phone {
+      display: none;
+    }
   }
+  @include photos_and_descriptions();
+
 }
+
 
 #mountains_description{
-  background-color:#FFFAF7;
-  margin-top: 60px;
-  margin-right: 100px;
-  h4 {
-    text-align: center;
-    margin:30px 30px 15px 30px;
-    font-size: 24px;
-    font-weight: bold;
-    @include phone {
-      padding:20px;
-      font-size: 18px;
-      margin: 0;
-      background-color:rgba(255, 255, 255, 0.7);
-    }
-  }
-  p {
-    text-align: justify;
-    font-size: 14px;
-    margin: 15px 30px 50px 30px;
-    @include phone {
-      margin:0;
-      padding: 12px;
-      background-color:rgba(255, 255, 255, 0.7);
-    }
-    .hidden{
-      @include phone {
-      visibility: hidden;
-      }
-    }
-    .btn_more {
-      height:45px;                //btn for mobile
-      width: 100%;
-      font-size: 14px;
-      border: 2px solid #010930;
-      background-color: rgba(255, 255, 255, 0.4);
-      padding: 10px;
-      position:relative;
-      top:20px;
-      @include phone {
-      top:-10px;
-      }
-      &:hover{
-        background-color: #010930;
-        color: white;
-      }
-    }
-    // .shadow_btn_dark{
-    //   box-shadow: 3px 3px 20px #010930;
-    // }
-  }
-  .btn_more {                 //btn for mobile
-    width: 100%;
-    font-size: 12px;
+@include description();
+.btn_more{
     border: 2px solid #010930;
-    padding: 10px;
-    position:relative;
-    top:-10px;
+    &:hover{
+      background-color: #010930;
+      color: white;
+    }
+}
 
-  }
-  .hobby_icons {
-    // margin-left: 20px;
-    width: 100%;
-    text-align:right;
-    background-color: #BCB9B7;
-    @include phone {
-      padding:5px;
-    }
-    li {
-      display: inline;
-      margin: 0;
-      padding: 5px;
-    }
-}
-@include phone {
-  background-color: rgba(255, 255, 255, 0.7);
-  background-image:url("../images/masuria.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-top:0;
-  margin-right:0;
-  width: auto;
-}
 }

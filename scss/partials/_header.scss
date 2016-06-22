@@ -7,8 +7,8 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: space-between;
-    border: 2px solid white;
-    border: 2px solid white;
+    // border: 2px solid white;
+    // border: 2px solid white;
 
       div {
         margin-top: -150px;
@@ -33,7 +33,6 @@ header {
 
 
       h3 {                                       //HEAD
-        // font-family: 'Slabo';
         text-align: center;
         width: 100%;
         height: auto;
@@ -89,7 +88,6 @@ header {
         flex-wrap:wrap;
       }
         li {
-            // font-weight:300;
             text-align:center;
             font-size: 18px;
             color: white;
@@ -165,48 +163,6 @@ header {
 #urban_places {                                      //SUBMENU URBAN_PLACES
     position: relative;
     text-align: center;
-    // left:0;
-    // top:0;
-    // display: block;
 
-
-    @include menu();
-
+    @include submenu();
 }
-  //       .after {
-  //       width: 40vh;
-  //       height: auto;
-  //       position: absolute;
-  //       top: 64px;
-  //       left: -50px;
-  //       color: red;
-  //       text-align: center;
-  //       background-color: rgba(0, 5, 28, 0.6);
-  //       display: none;
-  //       padding: 5px;
-  //       @include phone {
-  //         position: relative;
-  //         top:10px;
-  //         left:0;
-  //       }
-  //     }
-  //           li {
-  //             font-size: 14px;
-  //             font-weight:300;
-  //             height: auto;
-  //             width: 100%;
-  //             color: white;
-  //             &:hover {
-  //                 border: 2px solid #f06600;
-  //               }
-  //       @include phone {
-  //         padding:10px;
-  //       }
-  //     }
-  //   &:hover .after{
-  //     @include phone {
-  //       width: 55vh;
-  //       align-items:center;
-  //     }
-  //   }
-  // }

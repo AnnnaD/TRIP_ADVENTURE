@@ -37,6 +37,7 @@ function animateMenu(element) {
   });
 }
 
+//scrolling effect
 
 function step() {
 
@@ -45,13 +46,29 @@ var foot = $('.foot');
     var heightHeader = $('.ta_head').height();
     if( $(window).scrollTop() >= heightHeader ) {
          $('.foot').each( function(i){
-            if ($(window).scrollTop() >= $(this).offset().top - 300 ) {
-                $(this).animate({'opacity':'1'},1000);
+            if ($(window).scrollTop() >= $(this).offset().top - 300) {
+                $(this).animate({'opacity':'1'},1000).fadeOut('slow');
             }
          })
     }
+
 });
 }
+
+// function step() {
+//
+// var foot = $('.foot');
+//  $( window ).scroll(function() {
+//     var heightHeader = $('.ta_head').height();
+//     if( $(window).scrollTop() >= heightHeader ) {
+//          $('.foot').each( function(i){
+//             if ($(window).scrollTop() >= $(this).offset().top - 300 ) {
+//                 $(this).animate({'opacity':'1'},1000);
+//             }
+//          })
+//     }
+// });
+// }
 
 
 // function darkingButtons() {

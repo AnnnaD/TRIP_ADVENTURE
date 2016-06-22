@@ -1,11 +1,4 @@
 
-$tablet-width: 768px;
-@mixin tablet {
-  @media (max-width: #{$tablet-width}) {
-    @content;
-  }
-}
-
 $phone-width: 320px;
 @mixin phone {
   @media (max-width: #{$phone-width}) {
@@ -21,7 +14,9 @@ $phone-width: 320px;
   display: flex;
 }
 
-@mixin menu {
+                                                              //SUBMENU MIXIN
+
+@mixin submenu {
   .after {
   width: 40vh;
   height: auto;
@@ -61,3 +56,126 @@ $phone-width: 320px;
       }
     }
   }
+
+
+                                                    //PHOTOS AND DESCRIPTIONS
+
+  @mixin photos_and_descriptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    @include phone {
+      width: 100%;
+      height: auto;
+      display: inline;
+    }
+
+
+  li {
+    position: relative;
+    margin-top:120px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 35%;
+
+    @include phone {
+      margin:0;
+    }
+    img {
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+  }
+
+                                                          //DESCRIPTION BOXES
+
+@mixin description {
+  background-color:#FFFAF7;
+  margin-top: 60px;
+  margin-right: 100px;
+  // border:3px solid #f06600;
+  h4 {
+    color: #3e3f41;
+    text-align: center;
+    margin:30px 30px 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    @include phone {
+      font-size: 18px;
+      margin: 0;
+      padding:20px;
+      background-color:rgba(255, 255, 255, 0.7);
+    }
+  }
+  p {
+    color: #3e3f41;
+    text-align: justify;
+    font-size: 14px;
+    margin: 15px 30px 50px 30px;
+    @include phone {
+      margin:0;
+      padding: 12px;
+      background-color:rgba(255, 255, 255, 0.7);
+    }
+    .hidden{
+      @include phone {
+      visibility: hidden;
+      }
+    }
+    .btn_more {
+      height:45px;
+      width: 100%;
+      font-size: 14px;
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 10px;
+      position:relative;
+      top:20px;
+      @include phone {
+      top:-10px;
+      }
+      // &:hover{
+      //   background-color: #010930;
+      //   color: white;
+      // }
+    }
+
+  }
+  .hobby_icons {
+
+    width: 100%;
+    text-align:right;
+    background-color: #BCB9B7;
+    @include phone {
+      padding:5px;
+    }
+    li {
+      width: 100%;
+      height: auto;
+      display: inline;
+      margin: 0;
+    }
+    :nth-child(3){
+      margin-right: 20px;
+    }
+    &:hover {
+      // background-color: #f06600;
+      background-color: #010930;
+    }
+  }
+  @include phone {
+    margin-top:0;
+    margin-right:0;
+    width: auto;
+  }
+  @include phone {
+    background-image:url("../images/masuria.jpg");
+    background-color: rgba(255, 255, 255, 0.7);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:0;
+  }
+}

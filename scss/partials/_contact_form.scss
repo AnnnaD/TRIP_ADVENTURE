@@ -18,17 +18,15 @@
   background-image:url("../images/contact_photo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 800px;
-  // display: flex;
-  // flex-direction: row;
+  height: 750px;
+  margin-top:50px;
+
     h2 {
-    // color: #2d2d2d;
-    color: white;
-    font-size: 16px;
+    font-weight:400;
+    color: #4c4c4c;
+    font-size: 18px;
     margin:20px;
     text-align: center;
-    // display: flex;
-    // justify-content: center;
     }
 }
 .container {
@@ -36,11 +34,11 @@
   padding-bottom: 30px;
   text-align: center;
   width: 50%;
-  background-color:#010930;
-  // border: 2px solid blue;
+  border: 2px solid #f06600;
   margin: 0 auto;
-  margin-top: 40px;
-  box-shadow: 20px 20px 20px #c3b8b0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 5px 5px 30px #625248;
   @include phone {
   width: 100%;
   padding-top: 15px;
@@ -53,10 +51,11 @@ display:block;
 padding:10px;
 margin: 0 auto;
 font-size: 1.2em;
+font-weight: 400;
 background-color: #f06600;
 border: none;
 color: white;
-width: 300px;
+width: 80%;
 height: 45px;
 margin-bottom: 15px;
 margin-top: 30px;
@@ -65,9 +64,24 @@ width: 217px;
 }
 }
 
-.comments input[type=text], .comments textarea {
-  width: 90%;
+.comments input[type=text] {
+  color: #797979;
+  width: 40%;
   font-size: 12px;
+  padding: 10px;
+  margin-bottom: 20px;
+  resize: none;
+  font-size: 16px;
+  font-weight: 200;
+  box-sizing: border-box;
+  border: 1px solid #6a6b6d;
+}
+
+.comments textarea, .comments input[type=email] {
+  color: #797979;
+  width: 80%;
+  font-size: 12px;
+  font-weight: 200;
   padding: 10px;
   margin-bottom: 20px;
   resize: none;

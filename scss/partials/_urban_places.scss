@@ -1,31 +1,126 @@
-// .btn_more_urban {
-//   background-color: rgba(255, 255, 255, 0.4);                            //btn for mobile
-//   width: 100%;
-//   font-size: 12px;
-//   border: 2px solid #ffffff;
-//   padding: 10px;
-//   position:relative;
-//   top:-10px;
-//   color:white;
-// }
+section {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.foot {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  opacity:0;
+}
+
+.eleven {
+  z-index:1;
+  top: 110px;
+  right: 440px;
+  background-image: url("../images/foot_left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.twelve {
+  z-index: 1;
+  top: 150px;
+  right: 460px;
+  background-image: url("../images/foot_right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.thirteen {
+  background-image: url("../images/map_point.svg");     //WARSAW'S MAP POINT
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 190px;
+  right: 550px;
+  // transform: rotate(40deg);
+}
+
+.fourteen {
+  background-image: url("../images/foot_left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 320px;
+  right: 580px;
+  transform: rotate(90deg);
+}
+
+.fifteen {
+  background-image: url("../images/foot_right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 300px;
+  right: 550px;
+  transform: rotate(90deg);
+}
+
+.sixteen {                                            //SIGN POST
+  top: 300px;
+  right: 650px;
+  background-image: url("../images/sign_post.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.seventeen {
+  background-image: url("../images/foot_left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 545px;
+  right: 800px;
+  // transform: rotate(90deg);
+}
+
+.eighteen {
+  background-image: url("../images/foot_right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 565px;
+  right: 820px;
+  // transform: rotate(90deg);
+}
+
+.nineteen {
+  background-image: url("../images/foot_left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 730px;
+  right: 650px;
+  transform: rotate(-90deg);
+}
+
+.twenty{
+  background-image: url("../images/foot_right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 760px;
+  right: 690px;
+  transform: rotate(-90deg);
+}
+
+.twenty_one{
+  background-image: url("../images/foot_right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 760px;
+  right: 610px;
+  transform: rotate(-90deg);
+}
+
+.twenty_two{
+  background-image: url("../images/map_point.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 730px;
+  right: 560px;
+  // transform: rotate(-90deg);
+}
+
+
                                     //SECTION URBAN PLACES
 
-
-
-.urban_places {
-    margin:0;
-    padding: 30px;
-    font-size:30px;
-    text-align: center;
-    color:white;
-    background-color: #f06600;
-    margin-top: 30px;
-    @include phone {
-    font-size: 24px;
-    padding: 15px;
-    margin:0;
-    }
-  }
 
 .lines_straight {
     z-index: -1;
@@ -36,164 +131,127 @@
     right: 80px;
     border-top: 3px dashed orange;
     @include phone {
-      display: none;
+    display: none;
+  }
+}
+
+.urban_places {
+    margin:0;
+    padding: 30px;
+    font-size:30px;
+    text-align: center;
+    color:white;
+    background-color: #f06600; //z
+    margin-top: 50px; //z
+    @include phone {
+    font-size: 24px;
+    padding: 15px;
+    margin:0;//z
     }
   }
 
+
+
 .photos_and_descriptions_warsav {           //WARSAV
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: auto;
+  .shadow_orange {
+    box-shadow: 20px 20px 0px #f06600;
     @include phone {
-      width: 100%;
-      height: auto;
-      display: inline;
+      display: none;
     }
   }
+  @include photos_and_descriptions();
+  }
+
     #warsav_description {
-      background-color: #010930;
-      margin-top: 60px;
-      margin-right: 100px;
-      // padding-bottom: 20px;
-      border:3px solid #f06600;
+      @include description();
+      background-color:#010930;
+
         h4 {
-          text-align: center;
-          margin:30px 30px 15px 30px;
-          font-size: 24px;
           color: white;
-          font-weight: bold;
           @include phone {
-            font-size: 18px;
-            margin: 0;
-            padding:20px;
             background-color:rgba(1, 9, 48, 0.7);
           }
         }
         p {
           color: white;
-          text-align: justify;
-          font-size: 14px;
-          margin: 15px 30px 50px 30px;
           @include phone {
-            font-weight:300;
-            margin:0;
-            padding: 12px;
             background-color:rgba(1, 9, 48, 0.7);
           }
-          .hidden{
+        }
+    @include phone {
+      background-image:url("../images/mountains.jpg");
+      }
+          .btn_more {
+
+            color:white;
+            border: 2px solid #ffffff;
             @include phone {
-            visibility: hidden;
+            top:-10px;
+            }
+            &:hover{
+              background-color: #ffffff;
+              color: black;
             }
           }
+      .hobby_icons {
+
+        &:hover {
+          // background-color: #f06600;
+          background-color: #f06600;
         }
-      @include phone {
-        margin-top:0;
-        margin-right:0;
-        width: auto;
-        background-image:url("../images/mountains.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-      .btn_more_urban {
-        height: 45px;
-        background-color: rgba(255, 255, 255, 0.4);                            //btn for mobile
-        width: 100%;
-        font-size: 14px;
-        border: 2px solid #ffffff;
-        padding: 10px;
-        position:relative;
-        top:20px;
-        color:white;
-        @include phone {
-        top:-10px;
-        }
-        &:hover{
-          background-color: #ffffff;
-          color: black;
-        }
-      }
     }
+  }
 
     //CRACOV
 
     .photos_and_descriptions_cracov {
-      display: flex;
-      justify-content: space-between;
-      // flex-direction: column-reverse;
-      align-items: center;
-      width: 100%;
-      height: auto;
+      .shadow_orange {
+        box-shadow: 20px 20px 0px #f06600;
         @include phone {
-          width: 100%;
-          height: auto;
-          display: inline;
+          display: none;
         }
+      }
+      @include photos_and_descriptions();
     }
 
+
     #cracov_description {
+
+      @include description();
       background-color:#010930;
-      margin-top: 60px;
-      margin-right: 100px;
-      border:3px solid #f06600;
+
         h4 {
-          text-align: center;
-          margin:30px 30px 15px 30px;
-          font-size: 24px;
           color: white;
-          font-weight: bold;
           @include phone {
-            font-size: 18px;
-            margin: 0;
-            padding:20px;
             background-color:rgba(1, 9, 48, 0.7);
           }
         }
         p {
-          text-align: justify;
           color: white;
-          font-size: 14px;
-          margin: 15px 30px 50px 30px;
           @include phone {
-            font-weight:300;
-            margin:0;
-            padding: 12px;
             background-color:rgba(1, 9, 48, 0.7);
-          }
-          .hidden{
-            @include phone {
-            visibility: hidden;
-            }
           }
         }
     @include phone {
-      margin-top:0;
-      margin-right:0;
-      width: auto;
       background-image:url("../images/mountains.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
       }
-      .btn_more_urban {
-        height: 45px;
-        background-color: rgba(255, 255, 255, 0.4);                            //btn for mobile
-        width: 100%;
-        font-size: 14px;
-        border: 2px solid #ffffff;
-        padding: 10px;
-        position:relative;
-        top:20px;
-        color:white;
-        @include phone {
-        top:-10px;
+          .btn_more {
+
+            color:white;
+            border: 2px solid #ffffff;
+            @include phone {
+            top:-10px;
+            }
+            &:hover{
+              background-color: #ffffff;
+              color: black;
+            }
+          }
+      .hobby_icons {
+
+        &:hover {
+          // background-color: #f06600;
+          background-color: #f06600;
         }
-        &:hover{
-          background-color: #ffffff;
-          color: black;
-        }
-      }
-      // .shadow_btn{
-      //   box-shadow: 2px 2px 15px #ffffff;
-      // }
+    }
   }

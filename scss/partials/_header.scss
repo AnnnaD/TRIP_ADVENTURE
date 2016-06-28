@@ -7,73 +7,100 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: space-between;
-    // border: 2px solid white;
-    // border: 2px solid white;
 
-      div {
-        margin-top: -150px;
-        @include phone {
-        margin-top:-105px;
-        }
+    div {
+      margin-top: -150px;
+      @include phone {
+      margin-top:-105px;
+      }
+      @media #{$landscape}{
+      margin-top:-150px;
+      }
+    }
+
+    .social_media_icons {                            //SOCIAL MEDIA ICONS
+      width: 100%;
+      height:auto;
+      text-align: right;
+      padding: 1em;
+      @include phone {
+      text-align: center;
+      }
+      @media #{$landscape} {
+        padding:5px;
+      }
+        li {
+          display: inline-block;
+          margin-right: 20px;
+          @media #{$landscape} {
+            width: 20px;
+            height: 20px;
+            margin:10px;
+          }
+         }
       }
 
-      .social_media_icons {                     //SOCIAL MEDIA ICONS
-        width: 100%;
-        height:auto;
-        text-align: right;
-        padding: 1em;
-            li {
-                display: inline-block;
-                margin-right: 20px;
-              }
-        @include phone {
-          text-align: center;
-        }
-      }
-
-
-      h3 {                                       //HEAD
+      h3 {
         text-align: center;
         width: 100%;
         height: auto;
         color: white;
         font-size: 60px;
-        font-weight: normal;
+        font-weight: 300;
         @include phone {
+        position: absolute;
+        top:50px;
+        font-weight: normal;
+        margin:0;
+        font-size: 30px;
+        margin-top: 50px;
+        }
+      @media #{$landscape} {
           position: absolute;
           top:50px;
           font-weight: normal;
           margin:0;
-          font-size: 30px;
-          margin-top: 50px;
+          font-size: 28px;
+          margin-top: 30px;
         }
       }
 
-      .logo {
-                                            //LOGOTYPE
-          text-align: center;
-          width: 70px;
-          height: 70px;
-          padding: 0;
-          height: auto;
-          margin: 0 auto;
-          margin-top: 70px;
-          @include phone {
-            width: 50px;
-            height: 50px;
-            margin-top: 30px;
-          }
+      .logo {                                                 //LOGOTYPE
+        text-align: center;
+        stroke: green;
+        width: 80px;
+        height: 80px;
+        padding: 0;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 100px;
+        @include phone {
+        width: 50px;
+        height: 50px;
+        margin-top: 30px;
+        }
+        @media #{$landscape} {
+          width: 40px;
+          height: 40px;
+          margin-top: 30px;
         }
       }
+ }
 
 
 
 
-.main_menu {                                   // MAIN MENU
+.main_menu {                                                 // MAIN MENU
     margin-top: 60px;
     width: 100%;
     height: auto;
     background-color: rgba(0, 5, 28, 0.6);
+    @include phone {
+    margin-top: 110px;
+    }
+  @media #{$landscape} {
+    margin-top: 130px;
+    }
 
     ul {
       width: 60%;
@@ -83,34 +110,39 @@ header {
       justify-content:space-around;
       list-style-type: none;
       @include phone {
-        width:100%;
-        flex-direction: column;
-        flex-wrap:wrap;
+      width:100%;
+      flex-direction: column;
+      flex-wrap:wrap;
       }
-        li {
-            text-align:center;
-            font-size: 18px;
-            color: white;
-            padding: 20px;
-            @include phone {
-              padding:0;
-              padding-top:10px;
-              padding-bottom:10px;
-              font-weight:300;
-              margin:0;
-              font-size: 14px;
-            }
-            a {
+      @media #{$landscape}{
+      width: 75%;
+      }
+
+      li {
+          text-align:center;
+          font-size: 18px;
+          color: white;
+          padding: 20px;
+          @include phone {
+          padding:0;
+          padding-top:10px;
+          padding-bottom:10px;
+          font-weight:300;
+          margin:0;
+          font-size: 14px;
+          }
+          @media #{$landscape}{
+          font-size: 14px;
+          padding:14px;
+          }
+          a {
             color: white;
             text-decoration: none;
             &:hover {
-              border-bottom: 3px solid #f06600;
+            border-bottom: 3px solid #f06600;
             }
           }
         }
-      }
-      @include phone {
-      margin-top: 110px;
       }
     }
 
@@ -119,44 +151,54 @@ header {
     position: relative;
     text-align: center;
 
-        .after {
+      .after {
         width: 40vh;
         height: auto;
         position: absolute;
         top: 64px;
-        left: -50px;
+        left: -80px;
         color: red;
         text-align: center;
         background-color: rgba(0, 5, 28, 0.6);
         display: none;
         padding: 5px;
         @include phone {
-          position: relative;
-          top:10px;
-          left:0;
+        position: relative;
+        top:10px;
+        left:0;
         }
       }
-        li {
-            font-size: 14px;
-            font-weight:300;
-            height: auto;
-            width: 100%;
-            color: white;
-                &:hover {
-                  border: 2px solid #f06600;
-                }
-            @include phone {
-              padding: 10px;
-            }
+        &:hover .after {
+          @include phone {
+          width: 100%;
+          align-items:center;
           }
+          @media #{$landscape} {
+            width: 50vh;
+            position: absolute;
+            top:47px;
+            right:-42px;
+          }
+        }
 
-    &:hover .after {
-      @include phone {
+      li {
+        font-size: 14px;
+        font-weight:300;
+        height: auto;
         width: 100%;
-        align-items:center;
+        color: white;
+        &:hover {
+        border: 2px solid #f06600;
+        }
+        @include phone {
+        padding: 10px;
+        }
+        @media #{$landscape} {
+            padding:10px;
+            font-size: 12px;
+          }
       }
-    }
-  }
+   }
 
 
 

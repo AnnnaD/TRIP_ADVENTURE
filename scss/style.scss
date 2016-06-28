@@ -1,10 +1,11 @@
 @import "partials/reset.scss";
 @import "modules/mixins.scss";
-// @import "modules/variables.scss";
+@import "modules/variables.scss";
 @import "partials/header.scss";
 @import "partials/wild_nature.scss";
 @import "partials/urban_places.scss";
 @import "partials/contact_form.scss";
+@import "partials/view_section.scss";
 
 * {
   box-sizing: border-box;
@@ -18,4 +19,9 @@ body {
   height:auto;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }

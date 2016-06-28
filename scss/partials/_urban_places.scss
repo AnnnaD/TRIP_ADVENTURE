@@ -1,3 +1,5 @@
+
+                                                //SCROLLING EFFECT SECTION
 section {
   width: 100%;
   height: auto;
@@ -30,7 +32,7 @@ section {
   background-repeat: no-repeat;
 }
 .thirteen {
-  background-image: url("../images/map_point.svg");     //WARSAW'S MAP POINT
+  background-image: url("../images/map_point.svg");             //map point
   background-size: contain;
   background-repeat: no-repeat;
   top: 190px;
@@ -56,7 +58,7 @@ section {
   transform: rotate(90deg);
 }
 
-.sixteen {                                            //SIGN POST
+.sixteen {                                                       //sign post
   top: 300px;
   right: 650px;
   background-image: url("../images/sign_post.svg");
@@ -110,7 +112,7 @@ section {
 }
 
 .twenty_two{
-  background-image: url("../images/map_point.svg");
+  background-image: url("../images/map_point.svg");               //map point
   background-size: contain;
   background-repeat: no-repeat;
   top: 730px;
@@ -119,7 +121,7 @@ section {
 }
 
 
-                                    //SECTION URBAN PLACES
+                                                    //URBAN PLACES SECTION
 
 
 .lines_straight {
@@ -130,10 +132,13 @@ section {
     left:350px;
     right: 80px;
     border-top: 3px dashed orange;
-    @include phone {
-    display: none;
+      @include phone {
+      display: none;
+      }
+      @media #{$landscape} {
+      display: none;
+    }
   }
-}
 
 .urban_places {
     margin:0;
@@ -141,117 +146,143 @@ section {
     font-size:30px;
     text-align: center;
     color:white;
-    background-color: #f06600; //z
-    margin-top: 50px; //z
-    @include phone {
-    font-size: 24px;
-    padding: 15px;
-    margin:0;//z
-    }
-  }
-
-
-
-.photos_and_descriptions_warsav {           //WARSAV
-  .shadow_orange {
-    box-shadow: 20px 20px 0px #f06600;
-    @include phone {
-      display: none;
-    }
-  }
-  @include photos_and_descriptions();
-  }
-
-    #warsav_description {
-      @include description();
-      background-color:#010930;
-
-        h4 {
-          color: white;
-          @include phone {
-            background-color:rgba(1, 9, 48, 0.7);
-          }
-        }
-        p {
-          color: white;
-          @include phone {
-            background-color:rgba(1, 9, 48, 0.7);
-          }
-        }
-    @include phone {
-      background-image:url("../images/mountains.jpg");
+    background-color: #f06600;
+    margin-top: 50px;
+      @include phone {
+      font-size: 24px;
+      padding: 15px;
+      margin:0;
       }
-          .btn_more {
+  }
 
-            color:white;
-            border: 2px solid #ffffff;
-            @include phone {
-            top:-10px;
-            }
-            &:hover{
-              background-color: #ffffff;
-              color: black;
-            }
-          }
-      .hobby_icons {
 
+
+.photos_and_descriptions_warsaw {           //WARSAV
+    .shadow_orange {
+        box-shadow: 20px 20px 0px #f06600;
+        @include phone {
+        display: none;
+        }
+        @media #{$landscape} {
+        display: none;
+      }
+      }
+ @include photos_and_descriptions();
+ }
+
+ #warsaw_description {
+   @include description();
+   background-color:#010930;
+   @include phone {
+     background-image:url("../images/mountains.jpg");
+   }
+     @media #{$landscape} {
+     background-image:url("../images/mountains_2.jpg");
+   }
+
+    h4 {
+       color: white;
+       font-weight: 600;
+       @include phone {
+       background-color:rgba(1, 9, 48, 0.7);
+       }
+       @media #{$landscape} {
+      color: #010930;
+     }
+     }
+
+     p {
+       color: white;
+       @include phone {
+       background-color:rgba(1, 9, 48, 0.7);
+       }
+       @media #{$landscape} {
+      color: #010930;
+     }
+     }
+
+     .btn_more {
+        color:white;
+        border: 2px solid #ffffff;
+        background-color:#010930;
+        @include phone {
+        top:-10px;
+        }
+        &:hover{
+        background-color: #ffffff;
+        color: black;
+        }
+      }
+
+    .hobby_icons {
         &:hover {
-          // background-color: #f06600;
           background-color: #f06600;
         }
-    }
+     }
   }
 
     //CRACOV
 
-    .photos_and_descriptions_cracov {
+  .photos_and_descriptions_cracow {
       .shadow_orange {
         box-shadow: 20px 20px 0px #f06600;
         @include phone {
           display: none;
         }
+        @media #{$landscape} {
+        display: none;
+      }
       }
       @include photos_and_descriptions();
     }
 
 
-    #cracov_description {
-
+    #cracow_description {
       @include description();
       background-color:#010930;
+      @include phone {
+      background-image:url("../images/mountains.jpg");
+      }
+      @media #{$landscape} {
+      background-image:url("../images/mountains_2.jpg");
+    }
 
         h4 {
-          color: white;
-          @include phone {
-            background-color:rgba(1, 9, 48, 0.7);
-          }
+           color: white;
+           @include phone {
+           background-color:rgba(1, 9, 48, 0.7);
+           }
+           @media #{$landscape} {
+          color: #010930;
+         }
         }
+
         p {
           color: white;
           @include phone {
-            background-color:rgba(1, 9, 48, 0.7);
+          background-color:rgba(1, 9, 48, 0.7);
           }
+          @media #{$landscape} {
+         color: #010930;
         }
-    @include phone {
-      background-image:url("../images/mountains.jpg");
-      }
-          .btn_more {
+        }
 
+        .btn_more {
             color:white;
             border: 2px solid #ffffff;
+            background-color:#010930;
             @include phone {
             top:-10px;
             }
             &:hover{
-              background-color: #ffffff;
-              color: black;
+            background-color: #ffffff;
+            color: black;
             }
-          }
-      .hobby_icons {
+         }
 
-        &:hover {
-          // background-color: #f06600;
-          background-color: #f06600;
-        }
-    }
+      .hobby_icons {
+            &:hover {
+            background-color: #f06600;
+            }
+      }
   }

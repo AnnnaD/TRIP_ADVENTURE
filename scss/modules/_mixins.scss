@@ -6,8 +6,8 @@ $phone-width: 320px;
   }
 }
 
-@mixin flexbox {
 
+@mixin flexbox {
   display: -webkit-box;
   display: -moxt-box;
   display: -webkit-flex;
@@ -33,6 +33,12 @@ $phone-width: 320px;
     top:10px;
     left:0;
   }
+  @media #{$landscape} {
+    width: 50vh;
+    position: absolute;
+    top:47px;
+    right:-42px;
+  }
 }
 
   li {
@@ -46,6 +52,10 @@ $phone-width: 320px;
           }
       @include phone {
         padding: 10px;
+      }
+    @media #{$landscape} {
+        padding:10px;
+        font-size: 12px;
       }
     }
 
@@ -71,6 +81,13 @@ $phone-width: 320px;
       height: auto;
       display: inline;
     }
+    @media #{$landscape} {
+    width: 100%;
+    height: auto;
+    display: inline;
+    align-items: center;
+
+  }
 
 
   li {
@@ -83,6 +100,10 @@ $phone-width: 320px;
     @include phone {
       margin:0;
     }
+    @media #{$landscape} {
+      margin:0;
+      width: 100%;
+  }
     img {
       &:hover{
         transform: scale(1.1);
@@ -103,7 +124,14 @@ $phone-width: 320px;
     text-align: center;
     margin:30px 30px 15px 30px;
     font-size: 24px;
-    font-weight: bold;
+    font-weight:600;
+    @media #{$landscape} {
+      font-size: 20px;
+      margin: 0;
+      padding:10px;
+      padding-top:20px;
+      background-color:rgba(255, 255, 255, 0.7);
+    }
     @include phone {
       font-size: 18px;
       margin: 0;
@@ -112,6 +140,7 @@ $phone-width: 320px;
     }
   }
   p {
+    font-weight:300;
     color: #3e3f41;
     text-align: justify;
     font-size: 14px;
@@ -119,6 +148,14 @@ $phone-width: 320px;
     @include phone {
       margin:0;
       padding: 12px;
+      // padding-left: 80px;
+      background-color:rgba(255, 255, 255, 0.7);
+    }
+    @media #{$landscape} {
+      margin:0;
+      padding: 12px;
+      padding-right: 50px;
+      padding-left:50px;
       background-color:rgba(255, 255, 255, 0.7);
     }
     .hidden{
@@ -130,17 +167,15 @@ $phone-width: 320px;
       height:45px;
       width: 100%;
       font-size: 14px;
-      background-color: rgba(255, 255, 255, 0.4);
       padding: 10px;
       position:relative;
       top:20px;
       @include phone {
       top:-10px;
       }
-      // &:hover{
-      //   background-color: #010930;
-      //   color: white;
-      // }
+      @media #{$landscape} {
+      top:30px;
+      }
     }
 
   }
@@ -152,17 +187,24 @@ $phone-width: 320px;
     @include phone {
       padding:5px;
     }
-    li {
+
+   li{
+    //  display:inline;
       width: 100%;
+      // width:20px;
       height: auto;
       display: inline;
       margin: 0;
+      @include phone {
+        margin-top:0;
+        margin-right:0;
+        width: auto;
+      }
     }
     :nth-child(3){
       margin-right: 20px;
     }
     &:hover {
-      // background-color: #f06600;
       background-color: #010930;
     }
   }
@@ -172,10 +214,18 @@ $phone-width: 320px;
     width: auto;
   }
   @include phone {
-    background-image:url("../images/masuria.jpg");
+    // background-image:url("../images/masuria.jpg");
     background-color: rgba(255, 255, 255, 0.7);
     background-size: cover;
     background-repeat: no-repeat;
     margin:0;
+  }
+  @media #{$landscape} {
+    background-image:url("../images/masuria.jpg");
+    background-color: rgba(255, 255, 255, 0.7);
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    // margin-top:40px;
   }
 }

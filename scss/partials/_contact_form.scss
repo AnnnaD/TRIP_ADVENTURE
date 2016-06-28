@@ -1,34 +1,39 @@
 
-.contact {
-  margin:0;
-  padding: 30px;
-  font-size:30px;
-  text-align: center;
-  color:white;
-  background-color: #f06600;
-  margin-top: 30px;
-  @include phone {
-  font-size: 24px;
-  padding: 15px;
-  margin-top:0;
-  }
-}
+  .contact {
+      margin:0;
+      padding: 30px;
+      font-size:30px;
+      text-align: center;
+      color:white;
+      background-color: #f06600;
+      margin-top: 30px;
+      @include phone {
+      font-size: 24px;
+      padding: 15px;
+      margin-top:0;
+      }
+    }
 
-.contact_form{
+.contact_form {
   background-image:url("../images/contact_photo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 750px;
   margin-top:50px;
+  @include phone {
+    height: 700px;
+  margin-top:0;
+  }
 
-    h2 {
-    font-weight:400;
-    color: #4c4c4c;
-    font-size: 18px;
-    margin:20px;
-    text-align: center;
+  h2 {
+     font-weight:400;
+     color: #4c4c4c;
+     font-size: 18px;
+     margin:20px;
+     text-align: center;
     }
-}
+  }
+
 .container {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -47,21 +52,21 @@
 }
 
 .comments input[type=submit] {
-display:block;
-padding:10px;
-margin: 0 auto;
-font-size: 1.2em;
-font-weight: 400;
-background-color: #f06600;
-border: none;
-color: white;
-width: 80%;
-height: 45px;
-margin-bottom: 15px;
-margin-top: 30px;
-@include phone {
-width: 217px;
-}
+  display:block;
+  padding:10px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-weight: 400;
+  background-color: #f06600;
+  border: none;
+  color: white;
+  width: 80%;
+  height: 45px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+  @include phone {
+  width: 217px;
+  }
 }
 
 .comments input[type=text] {
@@ -89,6 +94,7 @@ width: 217px;
   box-sizing: border-box;
   border: 1px solid #6a6b6d;
 }
+
 .comments ::-webkit-input-placeholder {
   color:#3e3f41;
 }

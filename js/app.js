@@ -7,9 +7,10 @@ $(document).ready(function() {
   animateMenu(urban_places);
   var btn_more=$('section').find('.btn_more')
 
-  // darkingButtons();
+  showingSection();
   // lightingButtons();
   step();
+  // slider();
 
 });
 
@@ -55,36 +56,28 @@ var foot = $('.foot');
 });
 }
 
-// function step() {
-//
-// var foot = $('.foot');
-//  $( window ).scroll(function() {
-//     var heightHeader = $('.ta_head').height();
-//     if( $(window).scrollTop() >= heightHeader ) {
-//          $('.foot').each( function(i){
-//             if ($(window).scrollTop() >= $(this).offset().top - 300 ) {
-//                 $(this).animate({'opacity':'1'},1000);
-//             }
-//          })
-//     }
-// });
-// }
 
 
-// function darkingButtons() {
-//
-//   var btn_more=$('section').find('.btn_more')
-//   var button = $('button');
-//
-//   btn_more.on('mouseenter', function() {
-//     $(this).addClass('shadow_btn_dark')
-//     });
-//
-//    btn_more.on('mouseleave', function() {
-//   //     // console.log($(this));
-//     $(this).removeClass('shadow_btn_dark')
-//   });
-// }
+
+function showingSection() {
+
+  var btn_more=$('section').find('.btn_more')
+  var btn_return = $('#btn_return');
+  // var button = $('button');
+  var ul=$('.photos_and_descriptions_masuria')
+  var article = $('article');
+
+  btn_more.on('click', function() {
+    ul.slideUp('slow');
+    article.css('display','block')
+    });
+    btn_return.on('click', function() {
+      ul.slideDown('slow');
+      // article.css('display','none')
+      article.slideUp('slow')
+      });
+
+};
 //
 // function lightingButtons() {
 //
@@ -99,3 +92,34 @@ var foot = $('.foot');
 //     $(this).removeClass('shadow_btn')
 //     });
 // }
+
+
+//slider
+$(document).ready(function() {
+  console.log("working")
+  var ul = $('.view_section ul');
+  var li=ul = $('.view_section ul').find('li');
+  li.width();
+  var li_width = li.width();
+  var btn_prev=$('#btn_prev');
+
+function sliderRight() {
+  li.fadeOut('slow')
+  li.next().fadeIn('slow')
+  }
+
+function sliderLeft() {
+  li.fadeOut('slow')
+  li.prev().fadeIn('slow')
+  }
+
+$('#btn_next').on('mouseenter', function(){
+  sliderRight();
+  })
+
+btn_prev.on('mouseenter', function(){
+  console.log("klik")
+  sliderLeft();
+  })
+
+});

@@ -1,4 +1,4 @@
-//SCROLLING EFFECT SECTION
+                                                  //SCROLLING EFFECT SECTION
 
 section {
   width: 100%;
@@ -28,10 +28,10 @@ section {
   background-repeat: no-repeat;
 }
 
-.three {
+.three {                                                      //map point
   top: 240px;
   right: 450px;
-  background-image: url("../images/map_point.svg");     //MAP POINT MASURIA
+  background-image: url("../images/map_point.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -52,7 +52,7 @@ section {
   background-repeat: no-repeat;
 }
 
-.six {
+.six {                                                         //sign post
   top: 730px;
   right: 650px;
   background-image: url("../images/sign_post.svg");
@@ -62,7 +62,7 @@ section {
 .seven {
   top: 850px;
   right: 900px;
-  background-image: url("../images/map_point.svg");    //MAP POINT MOUNTAINS
+  background-image: url("../images/map_point.svg");           //map point
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -87,7 +87,7 @@ section {
   transform: rotate(-90deg);
 }
 
-.ten {
+.ten {                                                        //sign post
   top: 1050px;
   right: 600px;
   background-image: url("../images/sign_post.svg");
@@ -95,10 +95,12 @@ section {
   background-repeat: no-repeat;
 }
 
-//END OF SCROLLING EFFECT SECTION
+                                          //END OF SCROLLING EFFECT SECTION
 
 
-                            //WILD NATURE SECTION
+
+
+                                                    //WILD NATURE SECTION
 
 
   .lines {
@@ -112,10 +114,13 @@ section {
       border-top: 3px dashed orange;
       border-right: 3px dashed orange;
       border-left: 3px dashed orange;
-    @include phone {
-    display: none;
+        @include phone {
+        display: none;
+      }
+      @media #{$landscape} {
+      display: none;
     }
-  }
+   }
 
   .wild_nature {
       margin:0;
@@ -124,58 +129,73 @@ section {
       text-align: center;
       color:white;
       background-color: #010930;
-    @include phone {
-    font-size: 24px;
-    padding: 15px;
+        @include phone {
+        font-size: 24px;
+        padding: 15px;
+        }
     }
-  }
 
   .photos_and_descriptions_masuria {
-    .shadow_blue {
-      box-shadow: 20px 20px 0px #010930;
-      @include phone {
-        display: none;
-      }
-    }
-    @include photos_and_descriptions();
-}
+      .shadow_blue {
+          box-shadow: 20px 20px 0px #010930;
+          @include phone {
+          display: none;
+          }
+          @media #{$landscape} {
+          display: none;
+        }
+        }
+   @include photos_and_descriptions();
+  }
 
 
   #masuria_description {
-@include description();
-.btn_more{
-    border: 2px solid #010930;
-    &:hover{
-      background-color: #010930;
-      color: white;
-    }
-}
-  }
-}
-
-
-//MOUNTAINS
-
-.photos_and_descriptions_mountains {
-  .shadow_blue {
-    box-shadow: 20px 20px 0px #010930;
     @include phone {
-      display: none;
+      background-image:url("../images/masuria.jpg");
+    }
+    @include description();
+
+    .btn_more {
+      border: 2px solid #010930;
+      background-color:#FFFAF7;
+        &:hover{
+          background-color: #010930;
+          color: white;
+        }
+      }
     }
   }
-  @include photos_and_descriptions();
-
-}
 
 
-#mountains_description{
-@include description();
-.btn_more{
-    border: 2px solid #010930;
-    &:hover{
-      background-color: #010930;
-      color: white;
+                                                          //MOUNTAINS
+
+  .photos_and_descriptions_mountains {
+      .shadow_blue {
+        box-shadow: 20px 20px 0px #010930;
+        @include phone {
+        display: none;
+        }
+        @media #{$landscape} {
+        display: none;
+      }
+      }
+
+   @include photos_and_descriptions();
+   }
+
+
+   #mountains_description {
+     @include phone {
+       background-image:url("../images/mountains_2.jpg");
+     }
+     @include description();
+
+    .btn_more {
+      border: 2px solid #010930;
+      background-color:#FFFAF7;
+        &:hover {
+          background-color: #010930;
+          color: white;
+        }
+      }
     }
-}
-
-}

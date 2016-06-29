@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  // console.log("test")
 
   var wild_nature = $('#wild_nature');
   animateMenu(wild_nature);
@@ -8,11 +7,11 @@ $(document).ready(function() {
   var btn_more=$('section').find('.btn_more')
 
   showingSectionMasuria();
+  showingSectionMountains()
   showingSectionWarsaw()
-  // showingSectionMountains();
-  // lightingButtons();
+  showingSectionCracow()
+
   step();
-  // slider();
 
 });
 
@@ -40,7 +39,7 @@ function animateMenu(element) {
   });
 }
 
-//scrolling effect
+//SCROLLING EFFECT
 
 function step() {
 
@@ -58,110 +57,133 @@ var foot = $('.foot');
 });
 }
 
+//SHOW HIDE SECTION
+
+//Masuria
 
 function showingSectionMasuria() {
 
-  var btn_more=$('.masuria')
-  var btn_return = $('.btn_return');
-  // var button = $('button');
+  var btn_masuria=$('.masuria')
+  var btn_return_masuria = $('#return_masuria');
   var ul=$('.photos_and_descriptions_masuria')
   var article = $('article');
 
-  btn_more.on('click', function() {
-    $(this).siblings().parent().parent().parent().first().slideUp('slow');//hiding section
-    $(this).siblings().parent().parent().parent().first().siblings().eq(11).css('display','block');//article
+    btn_masuria.on('click', function() {
+      if ( $(window).width() > 569) {
+        $(this).siblings().parent().parent().parent().first().slideUp('slow');
+        $(this).siblings().parent().parent().parent().first().siblings().eq(11).css('display','block');
+      } else {
+        $(this).siblings().parent().parent().parent().first().siblings().eq(11).css('display','none');
+      }
     });
-  btn_return.on('mouseenter', function() {
-    $(this).siblings().siblings().parent().siblings().eq(11).slideDown('slow');//section
-      // article.css('display','none')
-    $(this).siblings().parent().slideUp('slow')//article
+    btn_return_masuria.on('mouseenter', function() {
+      $(this).siblings().siblings().parent().siblings().eq(11).slideDown('slow');
+      $(this).siblings().parent().slideUp('slow')
     });
-};
+  };
+
+//Mountains
+
+  function showingSectionMountains() {
+
+    var btn_mountains=$('.mountains')
+    var btn_return_mountains = $('#return_mountains');
+    var ul=$('.photos_and_descriptions_mountains')
+    var article = $('article');
+
+      btn_mountains.on('click', function() {
+        if ( $(window).width() > 569) {
+          $(this).siblings().parent().parent().parent().first().slideUp('slow');
+          $(this).siblings().parent().parent().parent().first().siblings().eq(13).css('display','block');
+        } else {
+          $(this).siblings().parent().parent().parent().first().siblings().eq(13).css('display','none');
+        }
+      });
+      btn_return_mountains.on('mouseenter', function() {
+        $(this).siblings().siblings().parent().siblings().eq(13).slideDown('slow');
+        $(this).siblings().parent().slideUp('slow')
+      });
+    };
+
+//Warsaw
 
 function showingSectionWarsaw() {
-
-  var btn_warsaw=$('.warsaw')
-  var btn_return_warsaw = $('#return_warsaw');
-  // var button = $('button');
-  var ul=$('.photos_and_descriptions_warsaw')
-  var article = $('article');
+    var btn_warsaw=$('.warsaw')
+    var btn_return_warsaw = $('#return_warsaw');
+    var ul=$('.photos_and_descriptions_warsaw')
+    var article = $('article');
 
   btn_warsaw.on('click', function() {
-    btn_warsaw.siblings().parent().parent().parent().first().siblings().siblings().eq(13).slideUp('slow');//hiding section
-    btn_warsaw.siblings().parent().parent().parent().first().siblings().eq(13).css('display','block');//article
-    });
-  btn_return_warsaw.on('click', function() {
-    btn_return_warsaw.siblings().siblings().parent().siblings().eq(13).slideDown('slow');//section
-      // article.css('display','none')
-    btn_return_warsaw.siblings().parent().slideUp('slow')//article
-    });
+    if ( $(window).width() > 569) {
+      $(this).siblings().parent().parent().parent().first().siblings().siblings().eq(13).slideUp('slow');
+      $(this).siblings().parent().parent().parent().first().siblings().eq(13).css('display','block')
+    } else {
+      $(this).siblings().parent().parent().parent().first().siblings().eq(13).css('display','none');
+    }
+  });
+  btn_return_warsaw.on('mouseenter', function() {
+    $(this).siblings().siblings().parent().siblings().eq(13).slideDown('slow');
+    $(this).siblings().parent().slideUp('slow')
+  });
 };
 
-// function showingSectionMountains() {
-//
-//   var btn_more=$('section').find('.btn_more')
-//   var btn_return = $('#btn_return');
-//   // var button = $('button');
-//   var ul=$('.photos_and_descriptions_masuria')
-//   var article = $('article');
-//
-//   btn_more.on('click', function() {
-//     $(this).siblings().parent().parent().parent().eq(1).slideUp('slow');//hiding section
-//     $(this).siblings().parent().parent().parent().first().siblings().eq(13).css('display','block');//article
-//     });
-//   btn_return.on('click', function() {
-//     $(this).siblings().siblings().parent().siblings().eq(13).slideDown('slow');//section
-//       // article.css('display','none')
-//     $(this).siblings().parent().slideUp('slow')//article
-//     });
-// };
+//Cracow
 
-//
-// function lightingButtons() {
-//
-//   var btn_more_urban = $('.btn_more_urban');
-//   var button = $('button');
-//
-//   btn_more_urban.on('mouseover', function() {
-//     $(this).addClass('shadow_btn')
-//   });
-//
-//   btn_more_urban.on('mouseleave', function() {
-//     $(this).removeClass('shadow_btn')
-//     });
-// }
+function showingSectionCracow() {
+    var btn_cracow=$('.cracow')
+    var btn_return_cracow = $('#return_cracow');
+    var ul=$('.photos_and_descriptions_cracow')
+    var article = $('article');
+
+  btn_cracow.on('click', function() {
+    if ( $(window).width() > 569) {
+      $(this).siblings().parent().parent().parent().first().siblings().siblings().eq(15).slideUp('slow');
+      $(this).siblings().parent().parent().parent().first().siblings().eq(15).css('display','block')
+    } else {
+      $(this).siblings().parent().parent().parent().first().siblings().eq(15).css('display','none');
+    }
+  });
+  btn_return_cracow.on('mouseenter', function() {
+    $(this).siblings().siblings().parent().siblings().eq(15).slideDown('slow');
+    $(this).siblings().parent().slideUp('slow')
+  });
+};
 
 
-//slider Masuria
+//SLIDERS
+
+//Masuria and Mountains
+
 $(document).ready(function() {
-  console.log("working")
   var ul = $('.view_section ul');
   var li=ul = $('.view_section ul').find('li');
   li.width();
   var li_width = li.width();
   var btn_prev=$('.btn_prev');
 
-function sliderRight() {
-  li.fadeOut('slow')
-  li.next().fadeIn('slow')
-  }
+    function sliderRight() {
+      li.fadeOut('slow')
+      li.next().fadeIn('slow')
+    }
 
-function sliderLeft() {
-  li.fadeOut('slow')
-  li.prev().fadeIn('slow')
-  }
+    function sliderLeft() {
+      li.fadeOut('slow')
+      li.prev().fadeIn('slow')
+    }
 
-$('.btn_next').on('mouseenter', function(){
-  sliderRight();
-  })
+    $('.btn_next').on('click', function(){
+      sliderRight();
+        event.preventDefault();
+    })
 
-btn_prev.on('mouseenter', function(){
-  console.log("klik")
-  sliderLeft();
-  })
+    btn_prev.on('click', function(){
+      console.log("klik")
+      sliderLeft();
+      event.preventDefault();
+    })
 });
 
-//slider Warsaw
+//Warsaw
 
 $(document).ready(function() {
   console.log("working")
@@ -171,22 +193,53 @@ $(document).ready(function() {
   var li_width = li.width();
   var btn_prev=$('.btn_prev');
 
-function sliderRight() {
-  li.fadeOut('slow')
-  li.next().fadeIn('slow')
-  }
+    function sliderRight() {
+      li.fadeOut('slow')
+      li.next().fadeIn('slow')
+    }
 
-function sliderLeft() {
-  li.fadeOut('slow')
-  li.prev().fadeIn('slow')
-  }
+    function sliderLeft() {
+      li.fadeOut('slow')
+      li.prev().fadeIn('slow')
+    }
 
-$('.btn_next').on('mouseenter', function(){
-  sliderRight();
-  })
+    $('.btn_next').on('click', function(){
+      sliderRight();
+    })
 
-btn_prev.on('mouseenter', function(){
-  console.log("klik")
-  sliderLeft();
-  })
+    btn_prev.on('click', function(){
+      console.log("klik")
+      sliderLeft();
+    })
+});
+
+
+//Cracow
+
+$(document).ready(function() {
+  console.log("working")
+  var ul = $('.view_section_cracow ul');
+  var li=ul = $('.view_section_cracow ul').find('li');
+  li.width();
+  var li_width = li.width();
+  var btn_prev=$('.btn_prev');
+
+    function sliderRight() {
+      li.fadeOut('slow')
+      li.next().fadeIn('slow')
+    }
+
+    function sliderLeft() {
+      li.fadeOut('slow')
+      li.prev().fadeIn('slow')
+    }
+
+    $('.btn_next').on('click', function(){
+      sliderRight();
+    })
+
+    btn_prev.on('click', function(){
+      console.log("klik")
+      sliderLeft();
+    })
 });

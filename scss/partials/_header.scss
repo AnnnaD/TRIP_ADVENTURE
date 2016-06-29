@@ -11,10 +11,10 @@ header {
     div {
       margin-top: -150px;
       @include phone {
-      margin-top:-105px;
+        margin-top:-105px;
       }
       @media #{$landscape}{
-      margin-top:-150px;
+        margin-top:-150px;
       }
     }
 
@@ -24,7 +24,7 @@ header {
       text-align: right;
       padding: 1em;
       @include phone {
-      text-align: center;
+        text-align: center;
       }
       @media #{$landscape} {
         padding:5px;
@@ -37,7 +37,7 @@ header {
             height: 20px;
             margin:10px;
           }
-         }
+        }
       }
 
       h3 {
@@ -48,14 +48,14 @@ header {
         font-size: 60px;
         font-weight: 300;
         @include phone {
-        position: absolute;
-        top:50px;
-        font-weight: normal;
-        margin:0;
-        font-size: 30px;
-        margin-top: 50px;
+          position: absolute;
+          top:50px;
+          font-weight: normal;
+          margin:0;
+          font-size: 30px;
+          margin-top: 50px;
         }
-      @media #{$landscape} {
+        @media #{$landscape} {
           position: absolute;
           top:50px;
           font-weight: normal;
@@ -75,17 +75,17 @@ header {
         margin: 0 auto;
         margin-top: 100px;
         @include phone {
-        width: 50px;
-        height: 50px;
-        margin-top: 30px;
+          width: 50px;
+          height: 50px;
+          margin-top: 30px;
         }
         @media #{$landscape} {
           width: 40px;
           height: 40px;
           margin-top: 30px;
         }
-      }
- }
+     }
+  }
 
 
 
@@ -96,10 +96,10 @@ header {
     height: auto;
     background-color: rgba(0, 5, 28, 0.6);
     @include phone {
-    margin-top: 110px;
+      margin-top: 110px;
     }
-  @media #{$landscape} {
-    margin-top: 130px;
+    @media #{$landscape} {
+      margin-top: 130px;
     }
 
     ul {
@@ -110,12 +110,12 @@ header {
       justify-content:space-around;
       list-style-type: none;
       @include phone {
-      width:100%;
-      flex-direction: column;
-      flex-wrap:wrap;
+        width:100%;
+        flex-direction: column;
+        flex-wrap:wrap;
       }
       @media #{$landscape}{
-      width: 75%;
+        width: 75%;
       }
 
       li {
@@ -124,23 +124,20 @@ header {
           color: white;
           padding: 20px;
           @include phone {
-          padding:0;
-          padding-top:10px;
-          padding-bottom:10px;
-          font-weight:300;
-          margin:0;
-          font-size: 14px;
+            padding:0;
+            padding-top:10px;
+            padding-bottom:10px;
+            font-weight:300;
+            margin:0;
+            font-size: 14px;
           }
           @media #{$landscape}{
-          font-size: 14px;
-          padding:14px;
+            font-size: 14px;
+            padding:14px;
           }
           a {
             color: white;
             text-decoration: none;
-            // &:hover {
-            // border-bottom: 3px solid #f06600;
-            // }
           }
         }
       }
@@ -163,15 +160,15 @@ header {
         display: none;
         padding: 5px;
         @include phone {
-        position: relative;
-        top:10px;
-        left:0;
+          position: relative;
+          top:10px;
+          left:0;
         }
       }
         &:hover .after {
           @include phone {
-          width: 100%;
-          align-items:center;
+            width: 100%;
+            align-items:center;
           }
           @media #{$landscape} {
             width: 50vh;
@@ -191,14 +188,14 @@ header {
         border: 2px solid #f06600;
         }
         @include phone {
-        padding: 10px;
+          padding: 10px;
         }
         @media #{$landscape} {
             padding:10px;
             font-size: 12px;
           }
       }
-   }
+  }
 
 
 

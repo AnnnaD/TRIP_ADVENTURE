@@ -37,7 +37,6 @@ section {
   background-repeat: no-repeat;
   top: 190px;
   right: 550px;
-  // transform: rotate(40deg);
 }
 
 .fourteen {
@@ -72,7 +71,6 @@ section {
   background-repeat: no-repeat;
   top: 545px;
   right: 800px;
-  // transform: rotate(90deg);
 }
 
 .eighteen {
@@ -81,7 +79,6 @@ section {
   background-repeat: no-repeat;
   top: 565px;
   right: 820px;
-  // transform: rotate(90deg);
 }
 
 .nineteen {
@@ -93,7 +90,7 @@ section {
   transform: rotate(-90deg);
 }
 
-.twenty{
+.twenty {
   background-image: url("../images/foot_right.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -102,7 +99,7 @@ section {
   transform: rotate(-90deg);
 }
 
-.twenty_one{
+.twenty_one {
   background-image: url("../images/foot_right.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -111,13 +108,12 @@ section {
   transform: rotate(-90deg);
 }
 
-.twenty_two{
+.twenty_two {
   background-image: url("../images/map_point.svg");               //map point
   background-size: contain;
   background-repeat: no-repeat;
   top: 730px;
   right: 560px;
-  // transform: rotate(-90deg);
 }
 
 
@@ -132,10 +128,10 @@ section {
     left:350px;
     right: 80px;
     border-top: 3px dashed orange;
-      @include phone {
+    @include phone {
       display: none;
-      }
-      @media #{$landscape} {
+    }
+    @media #{$landscape} {
       display: none;
     }
   }
@@ -148,24 +144,24 @@ section {
     color:white;
     background-color: #f06600;
     margin-top: 50px;
-      @include phone {
+    @include phone {
       font-size: 24px;
       padding: 15px;
       margin:0;
-      }
+    }
   }
 
 
 
-.photos_and_descriptions_warsaw {           //WARSAV
+.photos_and_descriptions_warsaw {                                 //WARSAW
     .shadow_orange {
         box-shadow: 20px 20px 0px #f06600;
         @include phone {
-        display: none;
+          display: none;
         }
         @media #{$landscape} {
-        display: none;
-      }
+          display: none;
+        }
       }
  @include photos_and_descriptions();
  }
@@ -174,31 +170,30 @@ section {
    @include description();
    background-color:#010930;
    @include phone {
-     background-image:url("../images/mountains.jpg");
+     background-image:url("../images/warsaw.jpg");
    }
-     @media #{$landscape} {
-     background-image:url("../images/mountains_2.jpg");
+   @media #{$landscape} {
+     background-image:url("../images/warsaw.jpg");
    }
-
     h4 {
        color: white;
        font-weight: 600;
        @include phone {
-       background-color:rgba(1, 9, 48, 0.7);
+         background-color:rgba(1, 9, 48, 0.7);
        }
        @media #{$landscape} {
-      color: #010930;
-     }
+        color: #010930;
+       }
      }
 
      p {
        color: white;
        @include phone {
-       background-color:rgba(1, 9, 48, 0.7);
+         background-color:rgba(1, 9, 48, 0.7);
        }
        @media #{$landscape} {
-      color: #010930;
-     }
+         color: #010930;
+       }
      }
 
      .btn_more {
@@ -206,7 +201,7 @@ section {
         border: 2px solid #ffffff;
         background-color:#010930;
         @include phone {
-        top:-10px;
+          top:-10px;
         }
         &:hover{
         background-color: #ffffff;
@@ -221,17 +216,16 @@ section {
      }
   }
 
-    //CRACOV
 
-  .photos_and_descriptions_cracow {
+  .photos_and_descriptions_cracow {                                  //CRACOW
       .shadow_orange {
         box-shadow: 20px 20px 0px #f06600;
         @include phone {
           display: none;
         }
         @media #{$landscape} {
-        display: none;
-      }
+          display: none;
+        }
       }
       @include photos_and_descriptions();
     }
@@ -241,30 +235,30 @@ section {
       @include description();
       background-color:#010930;
       @include phone {
-      background-image:url("../images/mountains.jpg");
+        background-image:url("../images/cracow.jpg");
       }
       @media #{$landscape} {
-      background-image:url("../images/mountains_2.jpg");
-    }
+        background-image:url("../images/cracow.jpg");
+      }
 
         h4 {
            color: white;
            @include phone {
-           background-color:rgba(1, 9, 48, 0.7);
+             background-color:rgba(1, 9, 48, 0.7);
            }
            @media #{$landscape} {
-          color: #010930;
-         }
+            color: #010930;
+           }
         }
 
         p {
           color: white;
           @include phone {
-          background-color:rgba(1, 9, 48, 0.7);
+            background-color:rgba(1, 9, 48, 0.7);
           }
           @media #{$landscape} {
-         color: #010930;
-        }
+            color: #010930;
+          }
         }
 
         .btn_more {
@@ -272,7 +266,7 @@ section {
             border: 2px solid #ffffff;
             background-color:#010930;
             @include phone {
-            top:-10px;
+              top:-10px;
             }
             &:hover{
             background-color: #ffffff;

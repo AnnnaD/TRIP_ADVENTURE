@@ -114,12 +114,12 @@ section {
       border-top: 3px dashed orange;
       border-right: 3px dashed orange;
       border-left: 3px dashed orange;
-        @include phone {
+      @include phone {
         display: none;
       }
       @media #{$landscape} {
-      display: none;
-    }
+        display: none;
+      }
    }
 
   .wild_nature {
@@ -129,29 +129,35 @@ section {
       text-align: center;
       color:white;
       background-color: #010930;
-        @include phone {
+      @include phone {
         font-size: 24px;
         padding: 15px;
-        }
+      }
     }
 
   .photos_and_descriptions_masuria {
       .shadow_blue {
           box-shadow: 20px 20px 0px #010930;
           @include phone {
-          display: none;
+            display: none;
           }
           @media #{$landscape} {
-          display: none;
-        }
+            display: none;
+          }
         }
    @include photos_and_descriptions();
+   @include phone {
+     display: block;
+   }
   }
 
 
   #masuria_description {
     @include phone {
       background-image:url("../images/masuria.jpg");
+    }
+    @media #{$landscape} {
+     background-image:url("../images/masuria.jpg");
     }
     @include description();
 
@@ -173,19 +179,21 @@ section {
       .shadow_blue {
         box-shadow: 20px 20px 0px #010930;
         @include phone {
-        display: none;
+          display: none;
         }
         @media #{$landscape} {
-        display: none;
+          display: none;
+        }
       }
-      }
-
    @include photos_and_descriptions();
    }
 
 
    #mountains_description {
      @include phone {
+       background-image:url("../images/mountains_2.jpg");
+     }
+     @media #{$landscape} {
        background-image:url("../images/mountains_2.jpg");
      }
      @include description();

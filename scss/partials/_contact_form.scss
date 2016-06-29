@@ -49,6 +49,9 @@
   padding-top: 15px;
   padding-bottom: 15px;
   }
+  @media #{$landscape} {
+ width:90%;
+}
 }
 
 .comments input[type=submit] {

@@ -4,7 +4,12 @@ $(document).ready(function() {
   animateMenu(wild_nature);
   var urban_places = $('#urban_places');
   animateMenu(urban_places);
-  var btn_more=$('section').find('.btn_more')
+  var btn_more=$('section').find('.btn_more');
+
+  var wild_urban_li = $('.after').find('a');
+  smooth(wild_urban_li);
+  var contact=$('.main_nav').children().last().find('a');
+  smooth(contact);
 
   showingSectionMasuria();
   showingSectionMountains()
@@ -39,6 +44,18 @@ function animateMenu(element) {
   });
 }
 
+
+//SMOOTH SCROLL
+
+function smooth(element) {
+  element.on('click', function() {
+    $('body').stop().animate({
+      scrollTop: $($(this).attr('href')).offset().top - 180
+    },1800);
+event.preventDefault();
+  });
+}
+
 //SCROLLING EFFECT
 
 function step() {
@@ -49,7 +66,7 @@ var foot = $('.foot');
     if( $(window).scrollTop() >= heightHeader ) {
          $('.foot').each( function(i){
             if ($(window).scrollTop() >= $(this).offset().top - 300) {
-                $(this).animate({'opacity':'1'},1000).fadeOut('slow');
+                $(this).animate({'opacity':'1'},1000).fadeOut(1500);
             }
          })
     }
@@ -242,4 +259,45 @@ $(document).ready(function() {
       console.log("klik")
       sliderLeft();
     })
+});
+
+
+//VALIDATION CONTACT FORM
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  function validationForm(event) {
+    var name = $('#name').value;
+    var lastName = $('#lastName').value;
+    var email = $('#email').value;
+    var message = $('#message').value;
+    var error=false;
+
+if(email.indexOf("@")===-1) {
+  error = true;
+}
+if(name.length < 5) {
+  error = true;
+}
+if(lastName.length < 5) {
+  error = true;
+}
+
+if(message.length < 10) {
+  error = true;
+}
+
+if(error) {
+  event.preventDefault();
+  alert("Try again")
+} else {
+  var form = document.querySelector("form").submit();
+}
+}
+
+var form = document.querySelector("form");
+form.addEventListener("submit", validationForm);
+
+event.preventDefault();
+
 });

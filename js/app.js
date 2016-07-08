@@ -194,7 +194,6 @@ $(document).ready(function() {
     })
 
     btn_prev.on('click', function(){
-      console.log("klik")
       sliderLeft();
       event.preventDefault();
     })
@@ -203,7 +202,6 @@ $(document).ready(function() {
 //Warsaw
 
 $(document).ready(function() {
-  console.log("working")
   var ul = $('.view_section_warsaw ul');
   var li=ul = $('.view_section_warsaw ul').find('li');
   li.width();
@@ -225,7 +223,6 @@ $(document).ready(function() {
     })
 
     btn_prev.on('click', function(){
-      console.log("klik")
       sliderLeft();
     })
 });
@@ -234,7 +231,6 @@ $(document).ready(function() {
 //Cracow
 
 $(document).ready(function() {
-  console.log("working")
   var ul = $('.view_section_cracow ul');
   var li=ul = $('.view_section_cracow ul').find('li');
   li.width();
@@ -256,7 +252,6 @@ $(document).ready(function() {
     })
 
     btn_prev.on('click', function(){
-      console.log("klik")
       sliderLeft();
     })
 });

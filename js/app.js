@@ -259,13 +259,16 @@ $(document).ready(function() {
 
 //VALIDATION CONTACT FORM
 
-document.addEventListener("DOMContentLoaded", function() {
+$(document).ready(function() {
 
   function validationForm(event) {
-    var name = $('#name').value;
-    var lastName = $('#lastName').value;
-    var email = $('#email').value;
-    var message = $('#message').value;
+
+      event.preventDefault();
+
+    var firstName = $('#firstName').val();
+    var lastName = $('#lastName').val();
+    var email = $('#email').val();
+    var message = $('#message').val()
     var error=false;
 
 if(email.indexOf("@")===-1) {
@@ -283,16 +286,15 @@ if(message.length < 10) {
 }
 
 if(error) {
-  event.preventDefault();
   alert("Try again")
 } else {
   var form = document.querySelector("form").submit();
 }
 }
 
+event.preventDefault();
 var form = document.querySelector("form");
 form.addEventListener("submit", validationForm);
 
-event.preventDefault();
 
 });
